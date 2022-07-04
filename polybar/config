@@ -1,0 +1,341 @@
+; Polybar Config
+; Author: Arunav Dey
+[colors] 
+transparent = #0000
+black   = #000
+; gray1   = #282828
+; gray2   = #777777 
+; white   = #ffffff
+; red     = #ffaaaa
+; red2    = #382828
+; green   = #aaffaa
+; green2  = #283828
+; blue    = #aaaaff
+; blue2   = #282838
+; yellow  = #ffffaa
+; pink    = #ffaaff
+; cyan    = #aaffff
+
+bg0_h   = #1d2021
+bg0     = #282828
+bg0_s   = #32302f
+bg1     = #3c3836
+bg2     = #504945
+bg3     = #665c54
+bg4     = #7c6f64
+
+gray    = #a89984
+gray2   = #928374
+
+red     = #cc241d
+red2    = #fb4934
+
+green   = #98971a
+green2  = #b8bb26
+
+yellow  = #d79921
+yellow2 = #fabd2f
+
+blue    = #458588
+blue2   = #83a598
+
+purple  = #b16286
+purple2 = #d3869b
+
+aqua    = #689d6a
+aqua2   = #8ec07c
+
+orange  = #d65d0e
+orange2 = #fe8019
+
+fg0     = #fbf1c7
+fg1     = #ebdbb2
+fg2     = #d5c4a1
+fg3     = #bdae93
+fg4     = #a89984
+
+background = ${colors.bg0_h}
+background-alt =  ${colors.bg0_s}
+foreground = ${colors.fg1}
+foreground-alt= ${color.fg4}
+
+
+[bar/bar1]
+background = ${colors.bg0_h}
+foreground = ${colors.fg1}
+
+width = 100%
+height = 34 
+radius = 0 
+fixed-center = true
+line-size = 0 
+line-color = ${colors.green}
+bottom = false
+override-redirect = false
+border-left = 0 
+border-right = 0  
+border-top = 0 
+border-bottom = 0
+;border-size = 25
+padding-left = 2 
+padding-right = 2
+; padding-top = 0
+; padding-bottom = 0
+
+; font-0 = fixed:pixelsize=11;1
+; font-1 = unifont:fontformat=truetype:size=12:antialias=true;0
+; font-2 = siji:pixelsize=10;1
+; font-3 = Font Awesome 5 Free Regular:style=Regular:pixelsize=10
+; font-4 = Font Awesome 5 Free Solid:style=Regular:pixelsize=10
+; font-5 = Font Awesome 5 Free Brands:style=Regular:pixelsize=10
+font-0 = Hack Nerd Font Mono:style=Regular:pixelsize=10
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+module-margin-left = 1 
+module-margin-right = 1
+modules-center = date
+modules-left = bspwm i3
+modules-right = cpu memory filesystem backlight pulseaudio wlan eth battery
+separator = /
+
+[module/backlight]
+type = internal/backlight
+card = nvidia_0
+format = light <label>
+label = %percentage%%
+format-foreground = ${colors.aqua2}
+
+[module/bspwm]
+type = internal/bspwm
+
+label-focused = %index%
+label-focused-background = ${colors.bg0_h}
+label-focused-padding = 1
+
+label-occupied = %index%
+label-occupied-foreground = ${colors.fg4}
+label-occupied-padding = 1
+
+label-urgent = %index%!
+label-urgent-background = ${colors.red2}
+label-urgent-padding = 1
+
+label-empty = 
+label-empty-foreground = ${colors.fg4}
+label-empty-padding = 1
+
+[module/i3]
+type = internal/i3
+format = <label-state> <label-mode>
+index-sort = true
+wrapping-scroll = false
+
+label-mode-foreground = ${colors.fg0}
+label-mode-background = ${colors.bg0_h}
+label-mode-padding = 1
+
+label-focused = %index%
+label-focused-foreground = ${colors.fg0}
+label-focused-background = ${colors.bg0_h} 
+label-focused-padding = 1
+
+label-unfocused = %index%
+label-unfocused-foreground = ${colors.fg4}
+label-unfocused-background = ${colors.bg0_h}
+label-unfocused-padding = 1
+
+label-visible = %index%
+label-visible-foreground = ${colors.fg0}
+label-visible-background = ${colors.bg0_h}
+label-visible-padding = 1
+
+label-urgent = !%index%
+label-urgent-foreground = ${colors.red2}
+label-urgent-background = ${colors.bg0_h}
+label-urgent-padding = 1
+
+[module/cpu]
+type = internal/cpu
+interval = 2
+; format-prefix = " "
+format-prefix = "cpu"
+format-prefix-foreground = ${colors.yellow2}
+format-foreground = ${colors.yellow2}
+label = %percentage:2%%
+
+[module/memory]
+type = internal/memory
+interval = 2
+; format-prefix = " "
+format-prefix = "mem "
+format-prefix-foreground = ${colors.blue2}
+format-foreground = ${colors.blue2}
+label = %percentage_used%%
+
+[module/filesystem]
+type = internal/fs
+interval = 25
+
+mount-0 = /
+
+label-mounted =fs %percentage_used%%
+label-mounted-foreground = ${colors.orange2}
+label-unmounted = %mountpoint% not mounted
+label-unmounted-foreground = ${colors.fg4}
+
+
+[module/wlan]
+type = internal/network
+interface = wlp4s0
+interval = 3.0
+
+format-packetloss = !<label-connected>
+format-packetloss-foreground = ${colors.red2}
+
+format-connected = <label-connected>
+; label-connected =    %essid%     
+; label-connected =       
+label-connected = wlan
+label-connected-foreground = ${colors.blue2}
+
+; format-disconnected =   
+format-disconnected = wlan 
+format-disconnected-foreground = ${colors.fg4}
+; label-disconnected =   
+; label-disconnected-foreground = ${colors.foreground-alt}
+
+[module/eth]
+type = internal/network
+interface = eno1
+interval = 3.0
+format-connected-prefix-foreground = ${colors.green2}
+; label-connected =   
+label-connected = eth  
+format-connected-foreground = ${colors.green2}
+; label-disconnected =   
+label-disconnected = eth   
+format-disconnected-foreground = ${colors.fg4}
+
+[module/date]
+type = internal/date
+interval = 1.0
+
+date = %d %B /
+time = %H:%M
+
+date-alt = %A / %d %B %Y /
+time-alt = %H:%M:%S
+
+format-foreground= ${colors.fg1}
+
+label = %date% %time%
+
+[module/pulseaudio]
+type = internal/pulseaudio
+use-ui-max = true
+
+format-volume = <label-volume>
+format-volume-underline = ${colors.yellow2}
+; label-volume =  %percentage%
+label-volume =vol %percentage%%
+label-volume-foreground = ${colors.yellow2}
+
+label-muted = mute 
+label-muted-foreground = ${colors.fg4}
+
+
+; [module/alsa]
+; type = internal/alsa
+
+; format-volume = <label-volume> <bar-volume>
+; label-volume = VOL
+; label-volume-foreground = ${colors.foreground}
+
+; format-muted-prefix = " "
+; format-muted-foreground = ${colors.foreground-alt}
+; label-muted = sound muted
+
+
+[module/battery]
+type = internal/battery
+battery = BAT0
+adapter = ADP1
+full-at = 98 
+label-charging = %percentage%%
+label-full = 
+label-discharging = %percentage%% 
+
+format-charging = bat <label-charging>
+format-charging-foreground = ${colors.green2}
+
+; format-discharging =  <label-discharging> 
+format-discharging = bat <label-discharging> 
+format-discharging-foreground = ${colors.red}
+
+; format-full = 
+format-full-foreground = ${colors.aqua2}
+
+; [module/temperature]
+; type = internal/temperature
+; thermal-zone = 0
+; warn-temperature = 60
+
+; format = <ramp> <label>
+; format-underline = #f50a4d
+; format-warn = <ramp> <label-warn>
+; format-warn-underline = ${self.format-underline}
+
+; label = %temperature-c%
+; label-warn = %temperature-c%
+; label-warn-foreground = ${colors.secondary}
+
+; ramp-0 = 
+; ramp-1 = 
+; ramp-2 = 
+; ramp-foreground = ${colors.foreground-alt}
+
+; [module/powermenu]
+; type = custom/menu
+
+; expand-right = true
+
+; format-spacing = 1
+
+; label-open =  
+; label-open-foreground = ${colors.secondary}
+; label-close = cancel
+; label-close-foreground = ${colors.secondary}
+; label-separator = |
+; label-separator-foreground = ${colors.foreground-alt}
+
+; menu-0-0 = reboot
+; menu-0-0-exec = menu-open-1
+; menu-0-1 = power off
+; menu-0-1-exec = menu-open-2
+
+; menu-1-0 = cancel
+; menu-1-0-exec = menu-open-0
+; menu-1-1 = reboot
+; menu-1-1-exec = sudo reboot
+
+; menu-2-0 = power off
+; menu-2-0-exec = sudo poweroff
+; menu-2-1 = cancel
+; menu-2-1-exec = menu-open-0
+
+[settings]
+screenchange-reload = true
+;compositing-background = xor
+;compositing-background = screen
+;compositing-foreground = source
+;compositing-border = over
+pseudo-transparency = true
+
+[global/wm]
+margin-top = 0
+margin-bottom = 0
+
+; vim:ft=dosini
+
