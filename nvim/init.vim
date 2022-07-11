@@ -79,6 +79,7 @@ let g:airline_theme='gruvbox'
 
 
 "##### KEYBINDS #####
+imap jj <Esc>
 nnoremap <space> za
 nnoremap <silent><C-n> :NERDTreeToggle<CR> :NERDTreeMirror<CR>
 nnoremap <silent><C-h> :TransparentToggle<CR>

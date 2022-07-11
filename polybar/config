@@ -201,7 +201,7 @@ label-connected = wlan
 label-connected-foreground = ${colors.blue2}
 
 ; format-disconnected =   
-format-disconnected = wlan 
+format-disconnected =
 format-disconnected-foreground = ${colors.fg4}
 ; label-disconnected =   
 ; label-disconnected-foreground = ${colors.foreground-alt}
@@ -215,7 +215,7 @@ format-connected-prefix-foreground = ${colors.green2}
 label-connected = eth  
 format-connected-foreground = ${colors.green2}
 ; label-disconnected =   
-label-disconnected = eth   
+label-disconnected =   
 format-disconnected-foreground = ${colors.fg4}
 
 [module/date]
