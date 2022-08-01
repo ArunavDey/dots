@@ -17,6 +17,7 @@ black   = #000
 ; cyan    = #aaffff
 
 bg0_h   = #1d2021
+; fg1     = #1d2021
 bg0     = #282828
 bg0_s   = #32302f
 bg1     = #3c3836
@@ -50,37 +51,36 @@ orange2 = #fe8019
 
 fg0     = #fbf1c7
 fg1     = #ebdbb2
+; bg0_h   = #ebdbb2
 fg2     = #d5c4a1
 fg3     = #bdae93
 fg4     = #a89984
 
-background = ${colors.bg0_h}
+background = ${colors.bg0}
 background-alt =  ${colors.bg0_s}
 foreground = ${colors.fg1}
 foreground-alt= ${color.fg4}
 
 
-[bar/bar1]
-background = ${colors.bg0_h}
+[bar/root]
+background = ${colors.bg0}
 foreground = ${colors.fg1}
 
 width = 100%
-height = 34 
-radius = 0 
+height = 50 
+radius = 25 
 fixed-center = true
-line-size = 0 
-line-color = ${colors.green}
 bottom = false
 override-redirect = false
-border-left = 0 
-border-right = 0  
-border-top = 0 
+border-left = 25 
+border-right = 25  
+border-top = 25 
 border-bottom = 0
 ;border-size = 25
-padding-left = 2 
-padding-right = 2
-; padding-top = 0
-; padding-bottom = 0
+padding-left = 4 
+padding-right = 4
+padding-top = 2
+padding-bottom = 2
 
 ; font-0 = fixed:pixelsize=11;1
 ; font-1 = unifont:fontformat=truetype:size=12:antialias=true;0
@@ -88,43 +88,68 @@ padding-right = 2
 ; font-3 = Font Awesome 5 Free Regular:style=Regular:pixelsize=10
 ; font-4 = Font Awesome 5 Free Solid:style=Regular:pixelsize=10
 ; font-5 = Font Awesome 5 Free Brands:style=Regular:pixelsize=10
-font-0 = Hack Nerd Font Mono:style=Regular:pixelsize=10
+font-0 = Hack Nerd Font Mono:style=Bold:pixelsize=10
 
 cursor-click = pointer
 cursor-scroll = ns-resize
 
 module-margin-left = 1 
 module-margin-right = 1
-modules-center = date
+modules-center = date 
 modules-left = bspwm i3
-modules-right = cpu memory filesystem backlight pulseaudio wlan eth battery
+; modules-right = cpu memory filesystem backlight pulseaudio wlan eth battery
+modules-right = cpu memory temperature filesystem pulseaudio mic wlan eth 
 separator = /
 
-[module/backlight]
-type = internal/backlight
-card = nvidia_0
-format = light <label>
-label = %percentage%%
-format-foreground = ${colors.aqua2}
+; [module/backlight]
+; type = internal/backlight
+; card = nvidia_0
+; format = light <label>
+; label = %percentage%%
+; format-foreground = ${colors.aqua2}
 
-[module/bspwm]
-type = internal/bspwm
+; [module/bspwm]
+; type = internal/bspwm
 
-label-focused = %index%
-label-focused-background = ${colors.bg0_h}
-label-focused-padding = 1
+; label-focused = %index%
+; label-focused-background = ${colors.bg0}
+; label-focused-padding = 1
 
-label-occupied = %index%
-label-occupied-foreground = ${colors.fg4}
-label-occupied-padding = 1
+; label-occupied = %index%
+; label-occupied-foreground = ${colors.fg4}
+; label-occupied-padding = 1
 
-label-urgent = %index%!
-label-urgent-background = ${colors.red2}
-label-urgent-padding = 1
+; label-urgent = %index%!
+; label-urgent-background = ${colors.red2}
+; label-urgent-padding = 1
 
-label-empty = 
-label-empty-foreground = ${colors.fg4}
-label-empty-padding = 1
+; label-empty = 
+; label-empty-foreground = ${colors.fg4}
+; label-empty-padding = 1
+
+; [bar/back]
+; inherit = bar/root
+; width = 1
+; override-redirect = false
+; modules-left = i3
+
+; [bar/left]
+; inherit = bar/root
+; modules-center = date
+; offset-x = 20%
+
+; [bar/center]
+; width = 14%
+; inherit = bar/root
+; modules-center = i3
+; offset-x = 43%
+
+; [bar/right]
+; inherit = bar/root
+; modules-center = date
+; offset-x = 70%
+
+
 
 [module/i3]
 type = internal/i3
@@ -133,37 +158,43 @@ index-sort = true
 wrapping-scroll = false
 
 label-mode-foreground = ${colors.fg0}
-label-mode-background = ${colors.bg0_h}
+label-mode-background = ${colors.bg0}
 label-mode-padding = 1
 
 label-focused = %index%
 label-focused-foreground = ${colors.fg0}
-label-focused-background = ${colors.bg0_h} 
+label-focused-background = ${colors.bg0} 
 label-focused-padding = 1
 
 label-unfocused = %index%
 label-unfocused-foreground = ${colors.fg4}
-label-unfocused-background = ${colors.bg0_h}
+label-unfocused-background = ${colors.bg0}
 label-unfocused-padding = 1
 
 label-visible = %index%
 label-visible-foreground = ${colors.fg0}
-label-visible-background = ${colors.bg0_h}
+label-visible-background = ${colors.bg0}
 label-visible-padding = 1
 
 label-urgent = !%index%
 label-urgent-foreground = ${colors.red2}
-label-urgent-background = ${colors.bg0_h}
+label-urgent-background = ${colors.bg0}
 label-urgent-padding = 1
+
+[module/gpu]
+type = custom/script
+exec = ~/.config/polybar/system-nvidia-smi.sh
+interval = 2
 
 [module/cpu]
 type = internal/cpu
 interval = 2
 ; format-prefix = " "
-format-prefix = "cpu"
+format-prefix = "cpu "
 format-prefix-foreground = ${colors.yellow2}
 format-foreground = ${colors.yellow2}
-label = %percentage:2%%
+; label = %percentage:2%%
+label = %percentage%%
 
 [module/memory]
 type = internal/memory
@@ -210,10 +241,10 @@ format-disconnected-foreground = ${colors.fg4}
 type = internal/network
 interface = eno1
 interval = 3.0
-format-connected-prefix-foreground = ${colors.green2}
+format-connected-prefix-foreground = ${colors.aqua2}
 ; label-connected =   
 label-connected = eth  
-format-connected-foreground = ${colors.green2}
+format-connected-foreground = ${colors.aqua2}
 ; label-disconnected =   
 label-disconnected =   
 format-disconnected-foreground = ${colors.fg4}
@@ -222,7 +253,7 @@ format-disconnected-foreground = ${colors.fg4}
 type = internal/date
 interval = 1.0
 
-date = %d %B /
+date = %A / %d %B /
 time = %H:%M
 
 date-alt = %A / %d %B %Y /
@@ -242,8 +273,19 @@ format-volume-underline = ${colors.yellow2}
 label-volume =vol %percentage%%
 label-volume-foreground = ${colors.yellow2}
 
-label-muted = mute 
-label-muted-foreground = ${colors.fg4}
+label-muted = vol mute 
+label-muted-foreground = ${colors.yellow2}
+
+[module/mic]
+type = custom/script
+tail = true
+interval = 0
+format-foreground = ${colors.blue2}
+
+exec = ~/.config/polybar/mic-tog.sh &
+click-left = pulseaudio-ctl mute-input
+; click-right = pavucontrol -t 4 &
+
 
 
 ; [module/alsa]
@@ -258,43 +300,38 @@ label-muted-foreground = ${colors.fg4}
 ; label-muted = sound muted
 
 
-[module/battery]
-type = internal/battery
-battery = BAT0
-adapter = ADP1
-full-at = 98 
-label-charging = %percentage%%
-label-full = 
-label-discharging = %percentage%% 
+; [module/battery]
+; type = internal/battery
+; battery = BAT0
+; adapter = ADP1
+; full-at = 98 
+; label-charging = %percentage%%
+; label-full = 
+; label-discharging = %percentage%% 
 
-format-charging = bat <label-charging>
-format-charging-foreground = ${colors.green2}
+; format-charging = bat <label-charging>
+; format-charging-foreground = ${colors.green2}
 
-; format-discharging =  <label-discharging> 
-format-discharging = bat <label-discharging> 
-format-discharging-foreground = ${colors.red}
+; ; format-discharging =  <label-discharging> 
+; format-discharging = bat <label-discharging> 
+; format-discharging-foreground = ${colors.red}
 
-; format-full = 
-format-full-foreground = ${colors.aqua2}
+; ; format-full = 
+; format-full-foreground = ${colors.aqua2}
 
-; [module/temperature]
-; type = internal/temperature
-; thermal-zone = 0
-; warn-temperature = 60
+[module/temperature]
+type = internal/temperature
+thermal-zone = 0
+warn-temperature = 60
 
-; format = <ramp> <label>
-; format-underline = #f50a4d
-; format-warn = <ramp> <label-warn>
-; format-warn-underline = ${self.format-underline}
+format = temp <label>
+format-foreground = ${colors.aqua2}
+format-warn = temp <label-warn>
+format-warn-foreground = ${colors.aqua2}
 
-; label = %temperature-c%
-; label-warn = %temperature-c%
-; label-warn-foreground = ${colors.secondary}
+label = %temperature-c%
+label-warn = %temperature-c%
 
-; ramp-0 = 
-; ramp-1 = 
-; ramp-2 = 
-; ramp-foreground = ${colors.foreground-alt}
 
 ; [module/powermenu]
 ; type = custom/menu
@@ -325,6 +362,7 @@ format-full-foreground = ${colors.aqua2}
 ; menu-2-1 = cancel
 ; menu-2-1-exec = menu-open-0
 
+
 [settings]
 screenchange-reload = true
 ;compositing-background = xor
@@ -338,4 +376,3 @@ margin-top = 0
 margin-bottom = 0
 
 ; vim:ft=dosini
-
