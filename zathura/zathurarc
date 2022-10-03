@@ -10,8 +10,5 @@ map [fullscreen] f toggle_fullscreen
 
 set adjust-open "best-fit"
 
-/* set recolor-lightcolor rgba(40, 40, 40, 0.8) */
-/* set recolor-darkcolor rgba(233, 224, 187, 1) */
-
-set recolor-lightcolor "#282828"
-set recolor-darkcolor "#ebdbb2"
+set recolor-lightcolor "#ebdbb2"
+set recolor-darkcolor "#282828"

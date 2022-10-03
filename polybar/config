@@ -1,23 +1,10 @@
-; Polybar Config
 ; Author: Arunav Dey
+
 [colors] 
 transparent = #0000
 black   = #000
-; gray1   = #282828
-; gray2   = #777777 
-; white   = #ffffff
-; red     = #ffaaaa
-; red2    = #382828
-; green   = #aaffaa
-; green2  = #283828
-; blue    = #aaaaff
-; blue2   = #282838
-; yellow  = #ffffaa
-; pink    = #ffaaff
-; cyan    = #aaffff
 
 bg0_h   = #1d2021
-; fg1     = #1d2021
 bg0     = #282828
 bg0_s   = #32302f
 bg1     = #3c3836
@@ -51,7 +38,6 @@ orange2 = #fe8019
 
 fg0     = #fbf1c7
 fg1     = #ebdbb2
-; bg0_h   = #ebdbb2
 fg2     = #d5c4a1
 fg3     = #bdae93
 fg4     = #a89984
@@ -63,31 +49,25 @@ foreground-alt= ${color.fg4}
 
 
 [bar/root]
-background = ${colors.bg0}
-foreground = ${colors.fg1}
+background = ${colors.background}
+foreground = ${colors.foreground}
 
 width = 100%
-height = 50 
-radius = 25 
+height = 40 
+radius = 20 
 fixed-center = true
-bottom = false
+; bottom = true
 override-redirect = false
-border-left = 25 
-border-right = 25  
-border-top = 25 
-border-bottom = 0
+border-left = 10 
+border-right = 10  
+border-top = 10 
+; border-bottom = 10
 ;border-size = 25
 padding-left = 4 
 padding-right = 4
-padding-top = 2
-padding-bottom = 2
+; padding-top = 4
+; padding-bottom = 4
 
-; font-0 = fixed:pixelsize=11;1
-; font-1 = unifont:fontformat=truetype:size=12:antialias=true;0
-; font-2 = siji:pixelsize=10;1
-; font-3 = Font Awesome 5 Free Regular:style=Regular:pixelsize=10
-; font-4 = Font Awesome 5 Free Solid:style=Regular:pixelsize=10
-; font-5 = Font Awesome 5 Free Brands:style=Regular:pixelsize=10
 font-0 = Hack Nerd Font Mono:style=Bold:pixelsize=10
 
 cursor-click = pointer
@@ -96,59 +76,9 @@ cursor-scroll = ns-resize
 module-margin-left = 1 
 module-margin-right = 1
 modules-center = date 
-modules-left = bspwm i3
-; modules-right = cpu memory filesystem backlight pulseaudio wlan eth battery
-modules-right = cpu memory temperature filesystem pulseaudio mic wlan eth 
+modules-left = i3
+modules-right = cpu memory filesystem temperature backlight bluetooth pulseaudio wlan eth battery
 separator = /
-
-; [module/backlight]
-; type = internal/backlight
-; card = nvidia_0
-; format = light <label>
-; label = %percentage%%
-; format-foreground = ${colors.aqua2}
-
-; [module/bspwm]
-; type = internal/bspwm
-
-; label-focused = %index%
-; label-focused-background = ${colors.bg0}
-; label-focused-padding = 1
-
-; label-occupied = %index%
-; label-occupied-foreground = ${colors.fg4}
-; label-occupied-padding = 1
-
-; label-urgent = %index%!
-; label-urgent-background = ${colors.red2}
-; label-urgent-padding = 1
-
-; label-empty = 
-; label-empty-foreground = ${colors.fg4}
-; label-empty-padding = 1
-
-; [bar/back]
-; inherit = bar/root
-; width = 1
-; override-redirect = false
-; modules-left = i3
-
-; [bar/left]
-; inherit = bar/root
-; modules-center = date
-; offset-x = 20%
-
-; [bar/center]
-; width = 14%
-; inherit = bar/root
-; modules-center = i3
-; offset-x = 43%
-
-; [bar/right]
-; inherit = bar/root
-; modules-center = date
-; offset-x = 70%
-
 
 
 [module/i3]
@@ -181,36 +111,45 @@ label-urgent-foreground = ${colors.red2}
 label-urgent-background = ${colors.bg0}
 label-urgent-padding = 1
 
-[module/gpu]
+
+[module/bluetooth]
 type = custom/script
-exec = ~/.config/polybar/system-nvidia-smi.sh
+exec = ~/.config/polybar/scripts/bluetooth.sh
 interval = 2
+click-left = exec ~/.config/polybar/scripts/toggle_bluetooth.sh
+click-right = exec blueman-manager
+
+
+[module/backlight]
+type = internal/backlight
+card = nv_backlight
+format = light <label>
+label = %percentage%%
+format-foreground = ${colors.aqua2}
+
 
 [module/cpu]
 type = internal/cpu
 interval = 2
-; format-prefix = " "
 format-prefix = "cpu "
 format-prefix-foreground = ${colors.yellow2}
 format-foreground = ${colors.yellow2}
-; label = %percentage:2%%
 label = %percentage%%
+
 
 [module/memory]
 type = internal/memory
 interval = 2
-; format-prefix = " "
 format-prefix = "mem "
 format-prefix-foreground = ${colors.blue2}
 format-foreground = ${colors.blue2}
 label = %percentage_used%%
 
+
 [module/filesystem]
 type = internal/fs
 interval = 25
-
 mount-0 = /
-
 label-mounted =fs %percentage_used%%
 label-mounted-foreground = ${colors.orange2}
 label-unmounted = %mountpoint% not mounted
@@ -219,39 +158,35 @@ label-unmounted-foreground = ${colors.fg4}
 
 [module/wlan]
 type = internal/network
-interface = wlp4s0
-interval = 3.0
+interface = wlan0
+interval = 2
 
 format-packetloss = !<label-connected>
 format-packetloss-foreground = ${colors.red2}
 
 format-connected = <label-connected>
-; label-connected =    %essid%     
-; label-connected =       
 label-connected = wlan
 label-connected-foreground = ${colors.blue2}
 
-; format-disconnected =   
 format-disconnected =
 format-disconnected-foreground = ${colors.fg4}
-; label-disconnected =   
-; label-disconnected-foreground = ${colors.foreground-alt}
+
 
 [module/eth]
 type = internal/network
 interface = eno1
-interval = 3.0
+interval = 2
 format-connected-prefix-foreground = ${colors.aqua2}
-; label-connected =   
+
 label-connected = eth  
 format-connected-foreground = ${colors.aqua2}
-; label-disconnected =   
+
 label-disconnected =   
 format-disconnected-foreground = ${colors.fg4}
 
 [module/date]
 type = internal/date
-interval = 1.0
+interval = 1
 
 date = %A / %d %B /
 time = %H:%M
@@ -263,18 +198,20 @@ format-foreground= ${colors.fg1}
 
 label = %date% %time%
 
+
 [module/pulseaudio]
 type = internal/pulseaudio
 use-ui-max = true
 
 format-volume = <label-volume>
 format-volume-underline = ${colors.yellow2}
-; label-volume =  %percentage%
+
 label-volume =vol %percentage%%
 label-volume-foreground = ${colors.yellow2}
 
 label-muted = vol mute 
-label-muted-foreground = ${colors.yellow2}
+label-muted-foreground = ${colors.fg4}
+
 
 [module/mic]
 type = custom/script
@@ -287,37 +224,25 @@ click-left = pulseaudio-ctl mute-input
 ; click-right = pavucontrol -t 4 &
 
 
+[module/battery]
+type = internal/battery
+battery = BAT0
+adapter = ADP1
+full-at = 98 
 
-; [module/alsa]
-; type = internal/alsa
+label-charging = plugged %percentage%%
+label-full = bat %percentage%%
+label-discharging = bat %percentage%% 
 
-; format-volume = <label-volume> <bar-volume>
-; label-volume = VOL
-; label-volume-foreground = ${colors.foreground}
+format-charging = <label-charging>
+format-charging-foreground = ${colors.green2}
 
-; format-muted-prefix = " "
-; format-muted-foreground = ${colors.foreground-alt}
-; label-muted = sound muted
+format-discharging = <label-discharging> 
+format-discharging-foreground = ${colors.red}
 
+format-full = <label-full>
+format-full-foreground = ${colors.aqua2}
 
-; [module/battery]
-; type = internal/battery
-; battery = BAT0
-; adapter = ADP1
-; full-at = 98 
-; label-charging = %percentage%%
-; label-full = 
-; label-discharging = %percentage%% 
-
-; format-charging = bat <label-charging>
-; format-charging-foreground = ${colors.green2}
-
-; ; format-discharging =  <label-discharging> 
-; format-discharging = bat <label-discharging> 
-; format-discharging-foreground = ${colors.red}
-
-; ; format-full = 
-; format-full-foreground = ${colors.aqua2}
 
 [module/temperature]
 type = internal/temperature
@@ -333,36 +258,6 @@ label = %temperature-c%
 label-warn = %temperature-c%
 
 
-; [module/powermenu]
-; type = custom/menu
-
-; expand-right = true
-
-; format-spacing = 1
-
-; label-open =  
-; label-open-foreground = ${colors.secondary}
-; label-close = cancel
-; label-close-foreground = ${colors.secondary}
-; label-separator = |
-; label-separator-foreground = ${colors.foreground-alt}
-
-; menu-0-0 = reboot
-; menu-0-0-exec = menu-open-1
-; menu-0-1 = power off
-; menu-0-1-exec = menu-open-2
-
-; menu-1-0 = cancel
-; menu-1-0-exec = menu-open-0
-; menu-1-1 = reboot
-; menu-1-1-exec = sudo reboot
-
-; menu-2-0 = power off
-; menu-2-0-exec = sudo poweroff
-; menu-2-1 = cancel
-; menu-2-1-exec = menu-open-0
-
-
 [settings]
 screenchange-reload = true
 ;compositing-background = xor
@@ -374,5 +269,3 @@ pseudo-transparency = true
 [global/wm]
 margin-top = 0
 margin-bottom = 0
-
-; vim:ft=dosini
