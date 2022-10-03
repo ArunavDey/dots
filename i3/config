@@ -14,13 +14,13 @@ exec --no-startup-id xset -b
 exec --no-startup-id picom & --experimental-backends --config "~/.config/picom/picom.conf"
 
 # other apps and commands
-exec_always --no-startup-id feh --bg-scale ~/Pictures/Wallpapers/platform.jpg
+exec_always --no-startup-id feh --bg-fill ~/Pictures/Wallpapers/platform.jpg
 exec_always --no-startup-id ~/.config/polybar/scripts/launch.sh 
 exec_always --no-startup-id xrandr --output eDP-1 --primary --rate 120.00
 
 # touchpad settings
-exec --no-startup-id xinput set-prop 15 297 1
-exec --no-startup-id xinput set-prop 15 276 1
+exec_always --no-startup-id xinput set-prop 15 302 1
+exec_always --no-startup-id xinput set-prop 15 281 1
 
 #brightness control
 bindsym XF86MonBrightnessUp exec light -A 5 # increase screen brightness
@@ -56,8 +56,8 @@ bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
-bindsym $mod+u split h
-bindsym $mod+y split v
+bindsym $mod+y split h
+bindsym $mod+u split v
 
 bindsym $mod+f fullscreen toggle
 
@@ -138,15 +138,15 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 
-set $bg-color			    #928374
-set $inactive-bg-color 		#3c3836
-set $text-color			    #282828
+set $bg-color			    #fe8019
+set $inactive-bg-color 		#a89984
+set $text-color			    #ffffff
 set $inactive-text-color	#ffffff
 set $urgent-bg-color 		#cc241d
 
 # colours 
 #colorclass             border              background          text                    indicator
-client.focused 		    $bg-color 		    $bg-color 		    $text-color 	        #fe8019ff
+client.focused 		    $bg-color 		    $bg-color 		    $text-color 	        #fe8019
 client.unfocused 	    $inactive-bg-color 	$inactive-bg-color 	$inactive-text-color 	#00ff0000
 client.focused_inactive $inactive-bg-color 	$inactive-bg-color 	$inactive-text-color 	#00ff0000
 client.urgent 		    $urgent-bg-color 	$urgent-bg-color 	$text-color 		    #00ff0000
@@ -164,7 +164,7 @@ gaps inner 10
 gaps outer 0
 
 # i3 borders
-for_window [class="^.*"] border pixel 0
+for_window [class="^.*"] border pixel 2
 
 # mouse focus
 focus_follows_mouse no

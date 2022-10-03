@@ -53,7 +53,6 @@ call plug#end()
 :set title
 :set termguicolors
 " :set mouse=a
-let g:neoformat_try_node_exe = 1
 
 
 " theme config
@@ -62,6 +61,7 @@ let g:neoformat_try_node_exe = 1
 :set t_Co=256
 let g:airline_powerline_fonts = 1
 let g:airline_theme='gruvbox'
+let g:rainbow_active = 1
 :autocmd vimenter * hi Normal guibg=NONE ctermbg=NONE
 
 
