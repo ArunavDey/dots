@@ -1,3 +1,4 @@
 #!/bin/sh
 
-nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader,nounits | awk '{ print "gpu",""$1"","%"}'
+var=$(nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader,nounits)
+echo "%{F#b8bb26}gpu $var%"
