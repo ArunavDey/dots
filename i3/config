@@ -14,13 +14,20 @@ exec --no-startup-id xset -b
 exec --no-startup-id picom & --experimental-backends --config "~/.config/picom/picom.conf"
 
 # other apps and commands
-exec_always --no-startup-id feh --bg-fill ~/Pictures/Wallpapers/platform.jpg
+exec_always --no-startup-id feh --bg-fill ~/Pictures/Wallpapers/gruv.webp
 exec_always --no-startup-id ~/.config/polybar/scripts/launch.sh 
-exec_always --no-startup-id xrandr --output eDP-1 --primary --rate 120.00
+# exec_always --no-startup-id xrandr --output eDP-1 --primary --rate 120.00
+exec_always --no-startup-id xrandr --output HDMI-0 --mode 1920x1080 --rate 144 --primary
+exec_always --no-startup-id xinput set-prop 15 302 281
 
-# touchpad settings
-exec_always --no-startup-id xinput set-prop 15 302 1
-exec_always --no-startup-id xinput set-prop 15 281 1
+
+# shortcuts
+bindsym $mod+Return exec alacritty
+# bindsym $mod+space exec rofi -show run -lines 5 -font "Hack Nerd Font 12" -theme gruvbox-dark-soft
+bindsym $mod+space exec dmenu_run -i -nb "#282828" -nf "#fbf1c7" -sb "#fe8019" -sf "#282828" -fn "Hack Nerd Font Mono-8"
+bindsym $mod+shift+x exec i3lock -c "#283828" -e -f
+bindsym Print exec scrot ~/Pictures/Screenshots/`date +%Y-%m-%d_%H:%M:%S`.png 
+
 
 #brightness control
 bindsym XF86MonBrightnessUp exec light -A 5 # increase screen brightness
@@ -56,8 +63,8 @@ bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
-bindsym $mod+y split h
-bindsym $mod+u split v
+bindsym $mod+u split h
+bindsym $mod+y split v
 
 bindsym $mod+f fullscreen toggle
 
@@ -121,10 +128,10 @@ bindsym $mod+Shift+e mode "exit: [l]ogout, [r]eboot, [s]hutdown"
 
 # resize windows
 mode "resize" {
-        bindsym h resize shrink width 2 px or 2 ppt
-        bindsym j resize grow height 2 px or 2 ppt
-        bindsym k resize shrink height 2 px or 2 ppt
-        bindsym l resize grow width 2 px or 2 ppt
+        bindsym h resize shrink width 10 px or 10 ppt
+        bindsym j resize grow height 10 px or 10 ppt
+        bindsym k resize shrink height 10 px or 10 ppt
+        bindsym l resize grow width 10 px or 10 ppt
 
         bindsym Left resize shrink width 2 px or 2 ppt
         bindsym Down resize grow height 2 px or 2 ppt
@@ -140,24 +147,16 @@ bindsym $mod+r mode "resize"
 
 set $bg-color			    #fe8019
 set $inactive-bg-color 		#a89984
-set $text-color			    #ffffff
-set $inactive-text-color	#ffffff
-set $urgent-bg-color 		#cc241d
+set $text-color			    #ebdbb2
+set $inactive-text-color	#fbf1c7
+set $urgent-bg-color 		#fb4934
 
 # colours 
 #colorclass             border              background          text                    indicator
 client.focused 		    $bg-color 		    $bg-color 		    $text-color 	        #fe8019
-client.unfocused 	    $inactive-bg-color 	$inactive-bg-color 	$inactive-text-color 	#00ff0000
-client.focused_inactive $inactive-bg-color 	$inactive-bg-color 	$inactive-text-color 	#00ff0000
-client.urgent 		    $urgent-bg-color 	$urgent-bg-color 	$text-color 		    #00ff0000
-
-# shortcuts
-bindsym $mod+Return exec alacritty
-bindsym $mod+space exec rofi -show run -lines 5 -font "Hack Nerd Font 12"
-# bindsym $mod+space exec dmenu_run
-bindsym $mod+shift+x exec i3lock -c "#283828" -e -f
-bindsym Print exec scrot ~/Pictures/Screenshots/`date +%Y-%m-%d_%H:%M:%S`.png 
-
+client.unfocused 	    $inactive-bg-color 	$inactive-bg-color 	$inactive-text-color 	#282828
+client.focused_inactive $inactive-bg-color 	$inactive-bg-color 	$inactive-text-color 	#282828
+client.urgent 		    $urgent-bg-color 	$urgent-bg-color 	$text-color 		    #fb4934
 
 # i3 gaps
 gaps inner 10

@@ -5,7 +5,7 @@ then
 else
   if [ $(echo info | bluetoothctl | grep 'Device' | wc -c) -eq 0 ]
   then 
-    echo "%{F#d65d0e}bt on"
+    echo "%{F#98971a}bt disconnected"
   fi
-  echo "%{F#fe8019}bt connected"
+  echo "%{F#b8bb26}bt connected"
 fi
