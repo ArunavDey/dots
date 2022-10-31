@@ -1,0 +1,93 @@
+# See dunst(5) for all configuration options
+
+[global]
+    monitor = 0
+    follow = monitor
+
+    geometry = 300x300+10-50
+    indicate_hidden = yes
+    shrink = true
+    # width = 100
+    # height = 100
+    # origin = top-left
+    alignment = center
+    vertical_alignment = center
+    # offset = 10x50
+    # scale = 0
+    corner_radius = 0
+    notification_limit = 0
+
+    progress_bar = true
+    progress_bar_height = 10
+    progress_bar_frame_width = 1
+    progress_bar_min_width = 150
+    progress_bar_max_width = 300
+
+
+    separator_height = 2
+    padding = 8
+    horizontal_padding = 8
+    frame_width = 3
+    frame_color = "#282828"
+
+    gap_size = 0
+
+    separator_color = frame
+
+    sort = yes
+
+    font = JetBrainsMono Nerd Font 9
+
+    line_height = 0
+
+    markup = full
+
+    format = "<b>%i</b>\n%s\n<i>%b</i>"
+
+    show_age_threshold = 60
+    ellipsize = middle
+
+    ignore_newline = no
+
+    stack_duplicates = true
+    hide_duplicate_count = false
+
+    show_indicators = yes
+
+    sticky_history = yes
+    history_length = 20
+
+    browser = /snap/bin/brave
+
+    always_run_script = true
+
+    startup_notification = true
+
+    title = Dunst
+    class = Dunst
+
+
+    ignore_dbusclose = false
+
+    force_xwayland = false
+    force_xinerama = false
+
+    mouse_left_click = close_current
+    mouse_middle_click = do_action, close_current
+    mouse_right_click = close_all
+
+
+[urgency_low]
+    background = "#282828"
+    foreground = "#fbf1c7"
+    timeout = 5
+
+[urgency_normal]
+    background = "#d65d0e"
+    foreground = "#fbf1c7"
+    timeout = 7
+
+[urgency_critical]
+    background = "#cc241d"
+    foreground = "#fbf1c7"
+    timeout = 0

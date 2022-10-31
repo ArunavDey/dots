@@ -1,15 +1,12 @@
-#
-# wm independent hotkeys
-#
-
 # terminal emulator
 super + Return
 	terminator
 
 # program launcher
 super + @space
-	dmenu_run -b -nb "#282828" -nf "#777777" -sb "#282828" -sf "#ebdbb2" -fn "Hack-8"
+	dmenu_run -i -nb "#1d2021" -nf "#fbf1c7" -sb "#fe8019" -sf "#1d2021" -fn "JetBrainsMono Nerd Font-8"
 # 	rofi
+    # rofi -show run -lines 5 -theme gruvbox-dark-soft
 
 # make sxhkd reload its configuration files:
 super + Escape
@@ -21,7 +18,10 @@ super + Escape
 
 # brightness
 XF86MonBrightnessDown
-light -U 5
+    light -U 5
+
+XF86MonBrightnessUp
+    light -A 5
 
 # volume
 XF86Audio{Raise,Lower}Volume
@@ -31,7 +31,7 @@ XF86AudioMute
     pulsemixer --toggle-mute
 
 # quit/restart bspwm
-super + alt + {q,r}
+super + shift + {q,r}
 	bspc {quit,wm -r}
 
 # close and kill
