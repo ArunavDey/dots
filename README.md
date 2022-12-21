@@ -1,17 +1,20 @@
-# Arunav's Dots
+# My dotfiles
 
-## 14 December 2022
+## Author: Arunav Dey
 
-These are a few of the dotfiles for my most frequent applications.
+## Date: 21 December 2022
+
+These are the dotfiles for most of my frequent applications.
 
 In this repo:
 
-1. alacritty
-2. bspwm
-3. i3-gaps
-4. nvim
-5. picom
-6. polybar
-7. sxhkd
-8. tmux
-9. zathura
+- pkglist & foreignpkg list for Arch
+- alacritty
+- dunst
+- i3-gaps
+- nvim
+- picom
+- polybar
+- rofi
+- tmux
+- zathura

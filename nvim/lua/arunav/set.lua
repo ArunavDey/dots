@@ -38,6 +38,9 @@ g.neoformat_basic_format_trim = 1
 -- Rainbow Parentheses
 g.rainbow_active = 1
 
+-- NERD Tree Default Window Size
+g.NERDTreeWinSize = 24
+
 -- Misc.
 g.python3_host_prog = "python"
 g.loaded_perl_provider = 0

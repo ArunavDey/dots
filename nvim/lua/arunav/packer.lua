@@ -9,6 +9,7 @@ return require("packer").startup(function(use)
 		requires = { { "nvim-lua/plenary.nvim" } },
 	})
 	use("ellisonleao/gruvbox.nvim")
+	use("catppuccin/nvim", { as = "catppuccin" })
 
 	use("nvim-treesitter/nvim-treesitter", { run = ":TSUpdate" })
 	use("nvim-treesitter/playground")
@@ -52,5 +53,8 @@ return require("packer").startup(function(use)
 
 	use("mattn/emmet-vim")
 	use("tpope/vim-commentary")
+  use("tpope/vim-surround")
 	use("sbdchd/neoformat")
+	use("luochen1990/rainbow")
+	-- use("ryanoasis/vim-devicons")
 end)
