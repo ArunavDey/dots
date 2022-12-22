@@ -8,7 +8,8 @@ These are the dotfiles for most of my frequent applications.
 
 In this repo:
 
-- pkglist & foreignpkg list for Arch
+- pkglist
+- foreignpkglist
 - alacritty
 - dunst
 - i3-gaps
