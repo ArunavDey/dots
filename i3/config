@@ -1,72 +1,97 @@
-# Author: Arunav Dey
+#############################
+##### AUTHOR: Arunav Dey ####
+#############################
 
+
+############################
+##### GENERAL SETTINGS #####
+############################
+font pango: JetBrainsMono Nerd Font 10
 set $mod Mod4
+focus_follows_mouse no
 
-# font
-font pango: Hack Nerd Font Mono 10
+###################
+##### COLOURS #####
+###################
+set $bg-color             #eed49f
+set $text-color           #24273a
+set $inactive-bg-color    #24273a
+set $inactive-text-color  #cad3f5
+set $urgent-bg-color      #ed8796
 
-# startup apps and commands
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
-exec --no-startup-id nm-applet
-exec --no-startup-id xset s off
-exec --no-startup-id xset -dpms
-exec --no-startup-id xset -b
-exec --no-startup-id picom & --experimental-backends --config "~/.config/picom/picom.conf"
-
-# other apps and commands
-exec_always --no-startup-id feh --bg-fill ~/Pictures/Wallpapers/gruv.webp
-exec_always --no-startup-id ~/.config/polybar/scripts/launch.sh 
-# exec_always --no-startup-id xrandr --output eDP-1 --primary --rate 120.00
-exec_always --no-startup-id xrandr --output HDMI-0 --mode 1920x1080 --rate 144 --primary
-exec_always --no-startup-id xinput set-prop 15 302 281
-
-
-# shortcuts
+######################
+###### SHORTCUTS #####
+######################
+bindsym $mod+Shift+c reload
+bindsym $mod+Shift+r restart
 bindsym $mod+Return exec alacritty
-# bindsym $mod+space exec rofi -show run -lines 5 -font "Hack Nerd Font 12" -theme gruvbox-dark-soft
-bindsym $mod+space exec dmenu_run -i -nb "#282828" -nf "#fbf1c7" -sb "#fe8019" -sf "#282828" -fn "Hack Nerd Font Mono-8"
-bindsym $mod+shift+x exec i3lock -c "#283828" -e -f
-bindsym Print exec scrot ~/Pictures/Screenshots/`date +%Y-%m-%d_%H:%M:%S`.png 
+bindsym $mod+b exec brave
+bindsym $mod+Shift+b exec brave --incognito
+bindsym $mod+f exec spacefm
+bindsym $mod+space exec dmenu_run -i -nb "#24273a" -nf "#cad3f5" -sb "#ed8796" -sf "#24273a" -fn "JetBrainsMono Nerd Font-12" -b
+bindsym $mod+Shift+x exec i3lock -c "#000000" -e -f
+bindsym $mod+Print exec scrot ~/Screenshots/`date +%Y-%m-%d_%H:%M:%S`.png 
+bindsym $mod+Shift+Print exec scrot -u -f ~/Screenshots/`date +%Y-%m-%d_%H:%M:%S`.png 
 
+# bindsym XF86MonBrightnessUp exec light -A 5
+# bindsym XF86MonBrightnessDown exec light -U 5
 
-#brightness control
-bindsym XF86MonBrightnessUp exec light -A 5 # increase screen brightness
-bindsym XF86MonBrightnessDown exec light -U 5 # decrease screen brightness
-
-#volume control
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +2%
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -2%
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle
 
+bindsym XF86AudioPlay exec playerctl play-pause
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
 
-# i3 movement and commands
+
+########################
+##### STARTUP APPS #####
+########################
+exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+exec --no-startup-id nm-applet
+exec --no-startup-id xset s off
+exec --no-startup-id xset -dpms
+exec --no-startup-id xset -b
+exec --no-startup-id redshift -P -l 12.9634:77.5855 -t 6500K:5000K
+# exec --no-startup-id sudo mount /dev/sda -t ext4 /mnt/hdd/
+
+exec_always --no-startup-id picom & --experimental-backends --config "~/.config/picom/picom.conf"
+exec_always --no-startup-id feh --bg-fill ~/Downloads/Pictures/gradient-9.png
+exec_always --no-startup-id ~/.config/polybar/scripts/launch.sh
+exec_always --no-startup-id xrandr --output HDMI-0 --mode 1920x1080 --rate 144 --primary
+exec_always --no-startup-id xinput set-prop 15 302 281
+
+
+######################################
+###### i3 MOVEMENTS AND COMMANDS #####
+######################################
 floating_modifier $mod
-
 bindsym $mod+Shift+q kill
 
-bindsym $mod+h focus left
-bindsym $mod+j focus down
-bindsym $mod+k focus up
-bindsym $mod+l focus right
-bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
-bindsym $mod+Right focus right
+bindsym $mod+h            focus left
+bindsym $mod+j            focus down
+bindsym $mod+k            focus up
+bindsym $mod+l            focus right
+bindsym $mod+Left         focus left
+bindsym $mod+Down         focus down
+bindsym $mod+Up           focus up
+bindsym $mod+Right        focus right
 
-bindsym $mod+Shift+h move left
-bindsym $mod+Shift+j move down
-bindsym $mod+Shift+k move up
-bindsym $mod+Shift+l move right
-bindsym $mod+Shift+Left move left
-bindsym $mod+Shift+Down move down
-bindsym $mod+Shift+Up move up
-bindsym $mod+Shift+Right move right
+bindsym $mod+Shift+h      move left
+bindsym $mod+Shift+j      move down
+bindsym $mod+Shift+k      move up
+bindsym $mod+Shift+l      move right
+bindsym $mod+Shift+Left   move left
+bindsym $mod+Shift+Down   move down
+bindsym $mod+Shift+Up     move up
+bindsym $mod+Shift+Right  move right
 
 bindsym $mod+u split h
 bindsym $mod+y split v
 
-bindsym $mod+f fullscreen toggle
+bindsym $mod+Shift+f fullscreen toggle
 
 bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
@@ -75,9 +100,12 @@ bindsym $mod+e layout toggle split
 bindsym $mod+Shift+space floating toggle
 
 bindsym $mod+a focus parent
-
 bindsym $mod+d focus child
 
+
+#########################
+##### i3 WORKSPACES #####
+#########################
 set $ws1 "1"
 set $ws2 "2"
 set $ws3 "3"
@@ -94,7 +122,7 @@ bindsym $mod+2 workspace $ws2
 bindsym $mod+3 workspace $ws3
 bindsym $mod+4 workspace $ws4
 bindsym $mod+5 workspace $ws5
-bindsym $mod+6 workspace $ws6 
+bindsym $mod+6 workspace $ws6
 bindsym $mod+7 workspace $ws7
 bindsym $mod+8 workspace $ws8
 bindsym $mod+9 workspace $ws9
@@ -111,59 +139,51 @@ bindsym $mod+Shift+8 move container to workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
 
-bindsym $mod+Shift+c reload
-bindsym $mod+Shift+r restart
 
-
-# exit session
-mode "exit: [l]ogout, [r]eboot, [s]hutdown"{
+############################
+##### SESSION SETTINGS #####
+############################
+mode "exit"{
   bindsym l exec i3-msg exit
-  bindsym r exec systemctl reboot
-  bindsym s exec shutdown now
-  bindsym Escape mode "default"
-  bindsym Return mode "default"
+    bindsym r exec systemctl reboot
+    bindsym s exec shutdown now
+    bindsym Escape mode "default"
+    bindsym Return mode "default"
 }
-bindsym $mod+Shift+e mode "exit: [l]ogout, [r]eboot, [s]hutdown"
+bindsym $mod+Shift+e mode "exit"
 
 
-# resize windows
+###########################
+##### WINDOW SETTINGS #####
+###########################
 mode "resize" {
-        bindsym h resize shrink width 10 px or 10 ppt
-        bindsym j resize grow height 10 px or 10 ppt
-        bindsym k resize shrink height 10 px or 10 ppt
-        bindsym l resize grow width 10 px or 10 ppt
+  bindsym h resize shrink width 10 px or 10 ppt
+    bindsym j resize grow height 10 px or 10 ppt
+    bindsym k resize shrink height 10 px or 10 ppt
+    bindsym l resize grow width 10 px or 10 ppt
 
-        bindsym Left resize shrink width 2 px or 2 ppt
-        bindsym Down resize grow height 2 px or 2 ppt
-        bindsym Up resize shrink height 2 px or 2 ppt
-        bindsym Right resize grow width 2 px or 2 ppt
+    bindsym Left resize shrink width 2 px or 2 ppt
+    bindsym Down resize grow height 2 px or 2 ppt
+    bindsym Up resize shrink height 2 px or 2 ppt
+    bindsym Right resize grow width 2 px or 2 ppt
 
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
-        bindsym $mod+r mode "default"
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+    bindsym $mod+r mode "default"
 }
 bindsym $mod+r mode "resize"
 
+gaps inner 16
+gaps top 48
 
-set $bg-color			    #fe8019
-set $inactive-bg-color 		#a89984
-set $text-color			    #ebdbb2
-set $inactive-text-color	#fbf1c7
-set $urgent-bg-color 		#fb4934
+###########################
+##### BORDER SETTINGS #####
+###########################
 
-# colours 
-#colorclass             border              background          text                    indicator
-client.focused 		    $bg-color 		    $bg-color 		    $text-color 	        #fe8019
-client.unfocused 	    $inactive-bg-color 	$inactive-bg-color 	$inactive-text-color 	#282828
-client.focused_inactive $inactive-bg-color 	$inactive-bg-color 	$inactive-text-color 	#282828
-client.urgent 		    $urgent-bg-color 	$urgent-bg-color 	$text-color 		    #fb4934
+#colorclass             border              background          text                  indicator
+client.focused          $bg-color           $bg-color           $text-color           #cad3f5
+client.unfocused        $inactive-bg-color  $inactive-bg-color  $inactive-text-color  #24d3f5
+client.focused_inactive $inactive-bg-color  $inactive-bg-color  $inactive-text-color  #24d3f5
+client.urgent           $urgent-bg-color    $urgent-bg-color    $text-color           #ed8796
 
-# i3 gaps
-gaps inner 10
-gaps outer 0
-
-# i3 borders
-for_window [class="^.*"] border pixel 2
-
-# mouse focus
-focus_follows_mouse no
+for_window [class="^.*"] border pixel 4

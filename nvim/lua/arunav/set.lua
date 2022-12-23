@@ -1,5 +1,5 @@
 local g = vim.g
-local o = vim.o
+local o = vim.opt
 
 -- General
 o.showcmd = true -- shows the command typed
@@ -10,6 +10,7 @@ o.cursorline = true -- highlights current line
 o.title = true -- let vim set the title of the window
 o.background = "dark" -- used for highlight color
 o.number = true -- shows lines numbers
+o.clipboard = "unnamedplus"
 
 -- Folding
 o.foldlevelstart = 16 -- when to fold

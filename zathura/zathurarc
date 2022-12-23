@@ -4,11 +4,11 @@ map i recolor
 map J zoom out
 map K zoom in
 map R rotate
-unmap f
-map f toggle_fullscreen
-map [fullscreen] f toggle_fullscreen
 
+set sandbox none
 set adjust-open "best-fit"
 
 set recolor-darkcolor "#ebdbb2"
 set recolor-lightcolor "#282828"
+
+set selection-clipboard clipboard

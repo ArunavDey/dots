@@ -1,57 +1,38 @@
 # Author: Arunav Dey
 
+###########################
+##### WINDOW SETTINGS #####
+###########################
 window:
   padding:
     x: 20
     y: 20
   opacity: 1
 
+#########################
+##### FONT SETTINGS #####
+#########################
 font:
+  size: 14.0
   normal:
     family: JetBrainsMono Nerd Font
-    # family: Hurmit Nerd Font
-    # family: RobotoMono Nerd Font
-    # family: TerminessTTF Nerd Font
-    # family: SpaceMono Nerd Font
-    # family: SauceCodePro Nerd Font
     style: Regular
 
   bold:
     family: JetBrainsMono Nerd Font
-    # family: Hurmit Nerd Font
-    # family: RobotoMono Nerd Font
-    # family: TerminessTTF Nerd Font
-    # family: SpaceMono Nerd Font
-    # family: SauceCodePro Nerd Font
     style: Bold
 
   italic:
     family: JetBrainsMono Nerd Font
-    # family: Hurmit Nerd Font
-    # family: RobotoMono Nerd Font
-    # family: TerminessTTF Nerd Font
-    # family: SpaceMono Nerd Font
-    # family: SauceCodePro Nerd Font
     style: Italic
 
   bold_italic:
     family: JetBrainsMono Nerd Font
-    # family: Hurmit Nerd Font
-    # family: RobotoMono Nerd Font
-    # family: TerminessTTF Nerd Font
-    # family: SpaceMono Nerd Font
-    # family: SauceCodePro Nerd Font
     style: Bold Italic
-
-  size: 14.0
-  offset:
-    x: 0
-    y: 0
 
 ########################
 ##### COLORSCHEMES #####
 ########################
-
 schemes:
   GruvboxDark: &GruvboxDark
     primary:
@@ -170,6 +151,9 @@ schemes:
 
 colors: *CatppuccinMacchiato
 
+#################
+##### MISC. #####
+#################
 selection:
   save_to_clipboard: true
 
