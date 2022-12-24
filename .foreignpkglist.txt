@@ -1,9 +1,9 @@
+7-zip
 bash-pipes
 betterdiscord-installer
 brave-bin
 catppuccin-gtk-theme-macchiato
 cava
-cdm
 flashfocus-git
 gotop
 heroku-cli
@@ -19,7 +19,6 @@ polybar-spotify
 postman-bin
 spicetify-cli
 spotify
-surf
 visual-studio-code-bin
 yay-git
 zoom
