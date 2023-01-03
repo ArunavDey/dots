@@ -24,20 +24,32 @@ set $urgent-bg-color      #ed8796
 ######################
 bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
+
 bindsym $mod+Return exec alacritty
+
 bindsym $mod+b exec brave
 bindsym $mod+Shift+b exec brave --incognito
-bindsym $mod+f exec spacefm
+
+bindsym $mod+f exec pcmanfm
+
+bindsym $mod+m exec thunderbird
+
 bindsym $mod+space exec dmenu_run -i -nb "#24273a" -nf "#cad3f5" -sb "#ed8796" -sf "#24273a" -fn "JetBrainsMono Nerd Font-12" -b
+
 bindsym $mod+Shift+x exec i3lock -c "#000000" -e -f
-bindsym $mod+Print exec scrot ~/Screenshots/`date +%Y-%m-%d_%H:%M:%S`.png 
-bindsym $mod+Shift+Print exec scrot -u -f ~/Screenshots/`date +%Y-%m-%d_%H:%M:%S`.png 
+
+bindsym $mod+Print exec scrot ~/Pictures/Screenshots/`date +%Y-%m-%d_%H:%M:%S`.png 
+bindsym $mod+Shift+Print exec scrot -u -f ~/Pictures/Screenshots/`date +%Y-%m-%d_%H:%M:%S`.png 
+
+bindsym $mod+Shift+p exec polybar-msg cmd toggle
+
+bindsym $mod+n exec nm-connection-editor
 
 # bindsym XF86MonBrightnessUp exec light -A 5
 # bindsym XF86MonBrightnessDown exec light -U 5
 
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +2%
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -2%
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +1%
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -1%
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle
 
@@ -55,11 +67,12 @@ exec --no-startup-id xset s off
 exec --no-startup-id xset -dpms
 exec --no-startup-id xset -b
 exec --no-startup-id redshift -P -l 12.9634:77.5855 -t 6500K:5000K
-# exec --no-startup-id sudo mount /dev/sda -t ext4 /mnt/hdd/
+exec --no-startup-id gnome-keyring-daemon --start
+exec --no-startup-id dunst
 
+exec_always --no-startup-id ~/.config/polybar/scripts/setup1.sh
 exec_always --no-startup-id picom & --experimental-backends --config "~/.config/picom/picom.conf"
-exec_always --no-startup-id feh --bg-fill ~/Downloads/Pictures/gradient-9.png
-exec_always --no-startup-id ~/.config/polybar/scripts/launch.sh
+exec_always --no-startup-id feh --bg-fill ~/Pictures/Wallpapers/gradient-7.png
 exec_always --no-startup-id xrandr --output HDMI-0 --mode 1920x1080 --rate 144 --primary
 exec_always --no-startup-id xinput set-prop 15 302 281
 
@@ -174,7 +187,6 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 gaps inner 16
-gaps top 48
 
 ###########################
 ##### BORDER SETTINGS #####
@@ -187,3 +199,5 @@ client.focused_inactive $inactive-bg-color  $inactive-bg-color  $inactive-text-c
 client.urgent           $urgent-bg-color    $urgent-bg-color    $text-color           #ed8796
 
 for_window [class="^.*"] border pixel 4
+# windows open in floating mode by default
+# for_window [class="^.*"] floating enable 
