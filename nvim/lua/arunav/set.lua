@@ -10,7 +10,7 @@ o.cursorline = true -- highlights current line
 o.title = true -- let vim set the title of the window
 o.background = "dark" -- used for highlight color
 o.number = true -- shows lines numbers
-o.clipboard = "unnamedplus"
+o.clipboard = "unnamedplus" -- copy to clipboard, doesn't work
 
 -- Folding
 o.foldlevelstart = 16 -- when to fold

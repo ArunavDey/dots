@@ -8,9 +8,12 @@ return require("packer").startup(function(use)
 		tag = "0.1.0",
 		requires = { { "nvim-lua/plenary.nvim" } },
 	})
+
+  -- Colorschemes
 	use("ellisonleao/gruvbox.nvim")
 	use("catppuccin/nvim", { as = "catppuccin" })
 
+  -- Treesitter code parsing
 	use("nvim-treesitter/nvim-treesitter", { run = ":TSUpdate" })
 	use("nvim-treesitter/playground")
 	use({
@@ -20,8 +23,13 @@ return require("packer").startup(function(use)
 		end,
 	})
 
+  -- Undo tree
 	use("mbbill/undotree")
+  
+  -- Git wrapper
 	use("tpope/vim-fugitive")
+
+  -- LSP and shit
 	use({
 		"VonHeikemen/lsp-zero.nvim",
 		requires = {
@@ -44,17 +52,30 @@ return require("packer").startup(function(use)
 		},
 	})
 
+  -- NERD Tree, file browsing
 	use("preservim/nerdtree")
 
+  -- Lualine for the bottom bar
 	use({
 		"nvim-lualine/lualine.nvim",
 		requires = { "kyazdani42/nvim-web-devicons", opt = true },
 	})
 
-	use("mattn/emmet-vim")
+  -- Comments
 	use("tpope/vim-commentary")
-  use("tpope/vim-surround")
+
+  -- Bracket completion
+	use("tpope/vim-surround")
+
+  -- Code formatting
 	use("sbdchd/neoformat")
+
+  -- Rainbow parentheses
 	use("luochen1990/rainbow")
-	-- use("ryanoasis/vim-devicons")
+
+  -- Discord presence
+  use("andweeb/presence.nvim")
+
+  -- Dev icons
+	use("ryanoasis/vim-devicons")
 end)
