@@ -7,13 +7,13 @@ window:
   padding:
     x: 20
     y: 20
-  opacity: 1
+  opacity: 1.0
 
 #########################
 ##### FONT SETTINGS #####
 #########################
 font:
-  size: 14.0
+  size: 13.0
   normal:
     family: JetBrainsMono Nerd Font
     style: Regular
