@@ -1,23 +1,20 @@
-# See dunst(5) for all configuration options
-
 [global]
     monitor = 0
-
     indicate_hidden = yes
     shrink = true
+
     width = 300
     height = 300
+
     alignment = center
     vertical_alignment = center
-    offset = 10x50
+
+    offset = 16x64
+
     corner_radius = 4
     notification_limit = 0
 
     progress_bar = false
-    progress_bar_height = 10
-    progress_bar_frame_width = 1
-    progress_bar_min_width = 150
-    progress_bar_max_width = 300
 
     separator_height = 2
     padding = 8
@@ -56,8 +53,6 @@
 
     always_run_script = true
 
-    # startup_notification = true
-
     title = Dunst
     class = Dunst
 
@@ -77,8 +72,8 @@
     timeout = 5
 
 [urgency_normal]
-    foreground = "#24273a"
     background = "#cad3f5"
+    foreground = "#24273a"
     timeout = 7
 
 [urgency_critical]
