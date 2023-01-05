@@ -12,10 +12,9 @@ In this repo:
 - foreignpkglist
 - alacritty
 - dunst
-- i3-gaps
+- i3wm
 - nvim
 - picom
 - polybar
-- rofi
 - tmux
 - zathura
