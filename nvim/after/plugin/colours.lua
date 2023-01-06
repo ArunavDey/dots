@@ -8,4 +8,3 @@ end
 
 -- ColourNeovim()
 ColourNeovim("catppuccin-mocha")
--- ColourNeovim()

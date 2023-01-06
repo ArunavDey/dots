@@ -1,40 +1,38 @@
 vim.cmd([[packadd packer.nvim]])
 
 return require("packer").startup(function(use)
+	-- Packer
 	use("wbthomason/packer.nvim")
 
-	use({
-		"nvim-telescope/telescope.nvim",
-		tag = "0.1.0",
-		requires = { { "nvim-lua/plenary.nvim" } },
-	})
-
-  -- Colorschemes
+	-- Colorschemes
 	use("ellisonleao/gruvbox.nvim")
 	use("catppuccin/nvim", { as = "catppuccin" })
 
-  -- Treesitter code parsing
-	use("nvim-treesitter/nvim-treesitter", { run = ":TSUpdate" })
-	use("nvim-treesitter/playground")
+	-- Fuzzy finder
 	use({
-		"windwp/nvim-autopairs",
-		config = function()
-			require("nvim-autopairs").setup({})
-		end,
+		"nvim-telescope/telescope.nvim",
+		tag = "0.1.0",
+		-- A few pre-witten Lua functions
+		requires = {
+			{ "nvim-lua/plenary.nvim" },
+			{ "BurntSushi/ripgrep" },
+		},
 	})
 
-  -- Undo tree
-	use("mbbill/undotree")
-  
-  -- Git wrapper
-	use("tpope/vim-fugitive")
+	-- Treesitter code parsing
+	use("nvim-treesitter/nvim-treesitter", { run = ":TSUpdate" })
 
-  -- LSP and shit
+	-- Show treesitter parse tree [:TSPlaygroundToggle]
+	-- use("nvim-treesitter/playground")
+
+	-- LSP, autocompletion and snippets
 	use({
 		"VonHeikemen/lsp-zero.nvim",
 		requires = {
 			-- LSP Support
 			{ "neovim/nvim-lspconfig" },
+
+			-- Useful for installing LSP, Linters, etc.
 			{ "williamboman/mason.nvim" },
 			{ "williamboman/mason-lspconfig.nvim" },
 
@@ -52,30 +50,35 @@ return require("packer").startup(function(use)
 		},
 	})
 
-  -- NERD Tree, file browsing
+	-- NERD Tree, file browsing
 	use("preservim/nerdtree")
 
-  -- Lualine for the bottom bar
+	-- Lualine bottom bar
 	use({
 		"nvim-lualine/lualine.nvim",
-		requires = { "kyazdani42/nvim-web-devicons", opt = true },
 	})
 
-  -- Comments
+	-- Undo tree
+	use("mbbill/undotree")
+
+	-- Git wrapper
+	use("tpope/vim-fugitive")
+
+	-- Comments
 	use("tpope/vim-commentary")
 
-  -- Bracket completion
+	-- Bracket completion
 	use("tpope/vim-surround")
 
-  -- Code formatting
+	-- Code formatting
 	use("sbdchd/neoformat")
 
-  -- Rainbow parentheses
+	-- Colour coded parentheses
 	use("luochen1990/rainbow")
 
-  -- Discord presence
-  use("andweeb/presence.nvim")
+	-- Discord presence
+	use("andweeb/presence.nvim")
 
-  -- Dev icons
+	-- Dev icons
 	use("ryanoasis/vim-devicons")
 end)
