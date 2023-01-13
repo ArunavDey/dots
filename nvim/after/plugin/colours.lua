@@ -6,5 +6,5 @@ function ColourNeovim(colour)
 	vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 end
 
--- ColourNeovim()
-ColourNeovim("catppuccin-mocha")
+ColourNeovim()
+-- ColourNeovim("catppuccin-mocha")

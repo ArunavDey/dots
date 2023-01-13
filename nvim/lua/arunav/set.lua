@@ -10,12 +10,12 @@ o.cursorline = true -- highlights current line
 o.title = true -- let vim set the title of the window
 o.background = "dark" -- used for highlight color
 o.number = true -- shows lines numbers
-o.clipboard = "unnamedplus" -- copy to clipboard, doesn't work
+o.clipboard = "unnamedplus" -- copy to clipboard, need xclip
 
 -- Folding
-o.foldlevelstart = 16 -- when to fold
-o.foldmethod = "indent" -- how to fold
-o.foldenable = true -- enables folding lines
+-- o.foldlevelstart = 16 -- when to fold
+-- o.foldmethod = "indent" -- how to fold
+-- o.foldenable = true -- enables folding lines
 
 -- Line Wrapping
 o.wrap = true -- enable wrapping long lines

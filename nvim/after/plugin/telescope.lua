@@ -9,7 +9,3 @@ vim.keymap.set("n", "<leader>fg", telescope_builtin.live_grep, {})
 vim.keymap.set("n", "<leader>fb", telescope_builtin.buffers, {})
 
 vim.keymap.set("n", "<leader>fh", telescope_builtin.help_tags, {})
-
-vim.keymap.set('n', '<leader>ps', function() 
-	telescope_builtin.grep_string({ search = vim.fn.input("Grep > ") }); 
-end)

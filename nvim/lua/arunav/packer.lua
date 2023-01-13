@@ -67,7 +67,7 @@ return require("packer").startup(function(use)
 	-- Comments
 	use("tpope/vim-commentary")
 
-	-- Bracket completion
+	-- Surround code with brackets, tags, etc.
 	use("tpope/vim-surround")
 
 	-- Code formatting
@@ -81,4 +81,24 @@ return require("packer").startup(function(use)
 
 	-- Dev icons
 	use("ryanoasis/vim-devicons")
+
+	-- Brackets, quotes, etc. completion
+	use({
+		"windwp/nvim-autopairs",
+		config = function()
+			require("nvim-autopairs").setup({})
+		end,
+	})
+
+  -- Customisable startup screen for neovim
+	use({
+		"startup-nvim/startup.nvim",
+		requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
+		config = function()
+			require("startup").setup()
+		end,
+	})
+
+  use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
+
 end)
