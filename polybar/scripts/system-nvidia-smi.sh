@@ -2,4 +2,4 @@
 
 var=$(nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader,nounits)
 
-echo "gpu $var%"
+echo "﬙ $var%"
