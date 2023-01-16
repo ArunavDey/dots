@@ -6,9 +6,8 @@ return require("packer").startup(function(use)
 
 	-- Colorschemes
 	use("ellisonleao/gruvbox.nvim")
-	use("catppuccin/nvim", { as = "catppuccin" })
 
-	-- Fuzzy finder
+	-- Telescope
 	use({
 		"nvim-telescope/telescope.nvim",
 		tag = "0.1.0",
@@ -16,14 +15,16 @@ return require("packer").startup(function(use)
 		requires = {
 			{ "nvim-lua/plenary.nvim" },
 			{ "BurntSushi/ripgrep" },
+			{ "nvim-telescope/telescope-fzf-native.nvim", run = "make" },
+			{ "nvim-telescope/telescope-file-browser.nvim" },
+			{
+				"nvim-tree/nvim-web-devicons",
+			},
 		},
 	})
 
 	-- Treesitter code parsing
 	use("nvim-treesitter/nvim-treesitter", { run = ":TSUpdate" })
-
-	-- Show treesitter parse tree [:TSPlaygroundToggle]
-	-- use("nvim-treesitter/playground")
 
 	-- LSP, autocompletion and snippets
 	use({
@@ -50,14 +51,6 @@ return require("packer").startup(function(use)
 		},
 	})
 
-	-- NERD Tree, file browsing
-	use("preservim/nerdtree")
-
-	-- Lualine bottom bar
-	use({
-		"nvim-lualine/lualine.nvim",
-	})
-
 	-- Undo tree
 	use("mbbill/undotree")
 
@@ -79,26 +72,14 @@ return require("packer").startup(function(use)
 	-- Discord presence
 	use("andweeb/presence.nvim")
 
-	-- Dev icons
-	use("ryanoasis/vim-devicons")
-
 	-- Brackets, quotes, etc. completion
 	use({
 		"windwp/nvim-autopairs",
-		config = function()
-			require("nvim-autopairs").setup({})
-		end,
 	})
 
-  -- Customisable startup screen for neovim
+	-- Status line
 	use({
-		"startup-nvim/startup.nvim",
-		requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
-		config = function()
-			require("startup").setup()
-		end,
+		"nvim-lualine/lualine.nvim",
+		requires = { "nvim-tree/nvim-web-devicons", opt = true },
 	})
-
-  use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
-
 end)

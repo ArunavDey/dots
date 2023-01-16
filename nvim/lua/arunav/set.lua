@@ -11,6 +11,7 @@ o.title = true -- let vim set the title of the window
 o.background = "dark" -- used for highlight color
 o.number = true -- shows lines numbers
 o.clipboard = "unnamedplus" -- copy to clipboard, need xclip
+o.termguicolors = true
 
 -- Folding
 -- o.foldlevelstart = 16 -- when to fold
