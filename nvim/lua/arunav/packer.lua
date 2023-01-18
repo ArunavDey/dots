@@ -4,8 +4,14 @@ return require("packer").startup(function(use)
 	-- Packer
 	use("wbthomason/packer.nvim")
 
-	-- Colorschemes
+	-- Colorschemes (all support treesitter)
 	use("ellisonleao/gruvbox.nvim")
+  use("sainnhe/gruvbox-material")
+  use("rebelot/kanagawa.nvim")
+  use("sainnhe/sonokai")
+  use("folke/tokyonight.nvim")
+  use("glepnir/zephyr-nvim")
+  vim.cmd.colorscheme("zephyr")
 
 	-- Telescope
 	use({
@@ -82,4 +88,10 @@ return require("packer").startup(function(use)
 		"nvim-lualine/lualine.nvim",
 		requires = { "nvim-tree/nvim-web-devicons", opt = true },
 	})
+
+  -- Smooth scrolling
+  use("karb94/neoscroll.nvim")
+
+  -- Minimap
+  use("gorbit99/codewindow.nvim")
 end)

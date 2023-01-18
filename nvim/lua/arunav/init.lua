@@ -1,5 +1,4 @@
 require("arunav.set")
 require("arunav.packer")
 require("arunav.remap")
-require("arunav.autocmd")
 require("arunav.config")

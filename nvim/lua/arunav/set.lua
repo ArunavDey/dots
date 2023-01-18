@@ -14,9 +14,8 @@ o.clipboard = "unnamedplus" -- copy to clipboard, need xclip
 o.termguicolors = true
 
 -- Folding
--- o.foldlevelstart = 16 -- when to fold
--- o.foldmethod = "indent" -- how to fold
--- o.foldenable = true -- enables folding lines
+-- o.foldmethod = "expr" -- how to fold
+-- o.foldexpr = "nvim_treesitter#foldexpr()"
 
 -- Line Wrapping
 o.wrap = true -- enable wrapping long lines
