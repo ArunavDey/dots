@@ -11,7 +11,7 @@ return require("packer").startup(function(use)
   use("sainnhe/sonokai")
   use("folke/tokyonight.nvim")
   use("glepnir/zephyr-nvim")
-  vim.cmd.colorscheme("zephyr")
+  vim.cmd.colorscheme("gruvbox")
 
 	-- Telescope
 	use({
@@ -90,7 +90,7 @@ return require("packer").startup(function(use)
 	})
 
   -- Smooth scrolling
-  use("karb94/neoscroll.nvim")
+  -- use("karb94/neoscroll.nvim")
 
   -- Minimap
   use("gorbit99/codewindow.nvim")
