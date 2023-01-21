@@ -6,10 +6,10 @@
     width = 300
     height = 300
 
-    alignment = center
+    alignment = left
     vertical_alignment = center
 
-    offset = 16x64
+    offset = 16x16
 
     corner_radius = 4
     notification_limit = 0
@@ -20,7 +20,7 @@
     padding = 8
     horizontal_padding = 8
     frame_width = 3
-    frame_color = "#cad3f5"
+    frame_color = "#282828"
 
     gap_size = 0
 
@@ -67,16 +67,16 @@
 
 
 [urgency_low]
-    background = "#24273a"
-    foreground = "#cad3f5"
+    background = "#282828"
+    foreground = "#fbf1c7"
     timeout = 5
 
 [urgency_normal]
-    background = "#cad3f5"
-    foreground = "#24273a"
+    background = "#fbf1c7"
+    foreground = "#282828"
     timeout = 7
 
 [urgency_critical]
-    background = "ed8796"
-    foreground = "#24273a"
+    background = "fb4934"
+    foreground = "#282828"
     timeout = 0
