@@ -8,7 +8,4 @@ map R rotate
 set sandbox none
 set adjust-open "best-fit"
 
-set recolor-darkcolor "#ebdbb2"
-set recolor-lightcolor "#282828"
-
 set selection-clipboard clipboard
