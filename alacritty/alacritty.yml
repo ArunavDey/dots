@@ -7,7 +7,7 @@ window:
   padding:
     x: 20
     y: 20
-  opacity: 1.0
+  opacity: 0.0
 
 #########################
 ##### FONT SETTINGS #####
@@ -16,18 +16,34 @@ font:
   size: 13.0
   normal:
     family: JetBrainsMono Nerd Font
+    # family: GohuFont Nerd Font
+    # family: FiraCode Nerd Font
+    # family: ProFontIIx Nerd Font
+    # family: NotoMono Nerd Font
     style: Regular
 
   bold:
     family: JetBrainsMono Nerd Font
+    # family: GohuFont Nerd Font
+    # family: FiraCode Nerd Font
+    # family: ProFontIIx Nerd Font
+    # family: NotoMono Nerd Font
     style: Bold
 
   italic:
     family: JetBrainsMono Nerd Font
+    # family: GohuFont Nerd Font
+    # family: FiraCode Nerd Font
+    # family: ProFontIIx Nerd Font
+    # family: NotoMono Nerd Font
     style: Italic
 
   bold_italic:
     family: JetBrainsMono Nerd Font
+    # family: GohuFont Nerd Font
+    # family: FiraCode Nerd Font
+    # family: ProFontIIx Nerd Font
+    # family: NotoMono Nerd Font
     style: Bold Italic
 
 ########################
@@ -36,7 +52,7 @@ font:
 schemes:
   GruvboxDark: &GruvboxDark
     primary:
-      background: "#1D2021"
+      background: "#282828"
       foreground: "#FBF1C7"
     normal:
       black: "#1D2021"
@@ -149,24 +165,5 @@ schemes:
       cyan: "#8BD5CA"
       white: "#A5ADCB"
 
-colors: *CatppuccinMacchiato
-
-#################
-##### MISC. #####
-#################
-selection:
-  save_to_clipboard: true
-
-cursor:
-  style:
-    shape: Block
-    blinking: On
-
-working_directory: None
-
-debug:
-  render_timer: false
-  log_level: Warn
-
-shell:
-  program: /bin/zsh
+# colors: *CatppuccinMacchiato
+colors: *GruvboxDark
