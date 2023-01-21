@@ -1,5 +1,9 @@
-local g = vim.g
-local o = vim.opt
+-----------------------------------------------
+---------- General Settings for Neovim --------
+-----------------------------------------------
+local vim = vim
+local g = vim.g -- let
+local o = vim.opt -- set
 
 -- General
 o.showcmd = true -- shows the command typed
@@ -14,7 +18,7 @@ o.clipboard = "unnamedplus" -- copy to clipboard, need xclip
 o.termguicolors = true
 
 -- Folding
--- o.foldmethod = "expr" -- how to fold
+-- o.foldmethod = "indent" -- how to fold
 -- o.foldexpr = "nvim_treesitter#foldexpr()"
 
 -- Line Wrapping
@@ -39,10 +43,13 @@ g.neoformat_basic_format_trim = 1
 -- Rainbow Parentheses
 g.rainbow_active = 1
 
--- NERD Tree Default Window Size
-g.NERDTreeWinSize = 24
-
 -- Misc.
 g.python3_host_prog = "python"
 g.loaded_perl_provider = 0
 g.loaded_ruby_provider = 0
+
+-- Minimap
+g.minimap_width = 8
+g.minimap_auto_start = 1
+g.minimap_base_highlight = "Normal"
+g.minimap_git_colors = 1

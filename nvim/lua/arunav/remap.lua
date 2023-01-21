@@ -1,3 +1,8 @@
+--------------------------------------
+---------- Remapping Keybinds --------
+--------------------------------------
+local vim = vim
+
 -- Neoformat keybind
 vim.keymap.set("n", "<leader>nf", vim.cmd.Neoformat)
 
@@ -17,8 +22,14 @@ vim.keymap.set(
 	{ noremap = true }
 )
 
--- Fugitive keybind
+-- Fugitive keybinds
 vim.keymap.set("n", "<leader>gs", vim.cmd.Git)
 
--- Undotree keybind
+-- Undotree keybinds
 vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle)
+
+-- Bufferlin keybinds
+vim.keymap.set("n", "<leader>bb", vim.cmd.BufferLinePick)
+vim.keymap.set("n", "<leader>bn", vim.cmd.BufferLineCyclePrev)
+vim.keymap.set("n", "<leader>bN", vim.cmd.BufferLineCycleNext)
+vim.keymap.set("n", "<leader>bc", vim.cmd.BufferLinePickClose)

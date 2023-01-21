@@ -1,27 +1,37 @@
+--------------------------------------------------
+---------- Plugins and Package Management --------
+--------------------------------------------------
+local vim = vim
 vim.cmd([[packadd packer.nvim]])
 
 return require("packer").startup(function(use)
-	-- Packer
+	---------- Packer --------
 	use("wbthomason/packer.nvim")
 
-	-- Colorschemes (all support treesitter)
+	---------- Colorschemes --------
+	-- * with treesitter support
 	use("ellisonleao/gruvbox.nvim")
-  use("sainnhe/gruvbox-material")
-  use("rebelot/kanagawa.nvim")
-  use("sainnhe/sonokai")
-  use("folke/tokyonight.nvim")
-  use("glepnir/zephyr-nvim")
-  vim.cmd.colorscheme("gruvbox")
+	use("rebelot/kanagawa.nvim")
+	use("sainnhe/sonokai")
+	use("folke/tokyonight.nvim")
+	use("glepnir/zephyr-nvim")
+	vim.cmd.colorscheme("gruvbox")
+	vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+	vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 
+	---------- Fuzzy Finder --------
 	-- Telescope
 	use({
 		"nvim-telescope/telescope.nvim",
 		tag = "0.1.0",
-		-- A few pre-witten Lua functions
 		requires = {
+			-- a few pre-witten Lua functions
 			{ "nvim-lua/plenary.nvim" },
+			-- for grepping through multiple files and folders
 			{ "BurntSushi/ripgrep" },
+			-- improves sorting performance in the FF
 			{ "nvim-telescope/telescope-fzf-native.nvim", run = "make" },
+			-- adds a file browser on top of telescope
 			{ "nvim-telescope/telescope-file-browser.nvim" },
 			{
 				"nvim-tree/nvim-web-devicons",
@@ -29,21 +39,22 @@ return require("packer").startup(function(use)
 		},
 	})
 
-	-- Treesitter code parsing
+	---------- Code Parsing --------
+	-- better syntax highlighting
 	use("nvim-treesitter/nvim-treesitter", { run = ":TSUpdate" })
 
 	-- LSP, autocompletion and snippets
 	use({
 		"VonHeikemen/lsp-zero.nvim",
 		requires = {
-			-- LSP Support
+			-- LSP support
 			{ "neovim/nvim-lspconfig" },
 
-			-- Useful for installing LSP, Linters, etc.
+			-- for installing LSPs, linters, etc.
 			{ "williamboman/mason.nvim" },
 			{ "williamboman/mason-lspconfig.nvim" },
 
-			-- Autocompletion
+			-- autocompletion
 			{ "hrsh7th/nvim-cmp" },
 			{ "hrsh7th/cmp-buffer" },
 			{ "hrsh7th/cmp-path" },
@@ -51,47 +62,56 @@ return require("packer").startup(function(use)
 			{ "hrsh7th/cmp-nvim-lsp" },
 			{ "hrsh7th/cmp-nvim-lua" },
 
-			-- Snippets
+			-- snippets
 			{ "L3MON4D3/LuaSnip" },
 			{ "rafamadriz/friendly-snippets" },
 		},
 	})
 
-	-- Undo tree
-	use("mbbill/undotree")
+	---------- Visual stuff --------
+	-- status line
+	use({
+		"nvim-lualine/lualine.nvim",
+		requires = { "nvim-tree/nvim-web-devicons", opt = true },
+	})
 
-	-- Git wrapper
-	use("tpope/vim-fugitive")
+	-- buffer line
+	use({
+		"akinsho/bufferline.nvim",
+		tag = "v3.*",
+		requires = "nvim-tree/nvim-web-devicons",
+	})
 
-	-- Comments
+	-- minimap
+	-- use("gorbit99/codewindow.nvim")
+	use({
+		"wfxr/minimap.vim",
+	})
+
+	---------- Miscellaneous --------
+	-- commentary support
 	use("tpope/vim-commentary")
-
-	-- Surround code with brackets, tags, etc.
-	use("tpope/vim-surround")
-
-	-- Code formatting
-	use("sbdchd/neoformat")
-
-	-- Colour coded parentheses
-	use("luochen1990/rainbow")
-
-	-- Discord presence
-	use("andweeb/presence.nvim")
 
 	-- Brackets, quotes, etc. completion
 	use({
 		"windwp/nvim-autopairs",
 	})
 
-	-- Status line
-	use({
-		"nvim-lualine/lualine.nvim",
-		requires = { "nvim-tree/nvim-web-devicons", opt = true },
-	})
+	-- surround code with brackets, tags, etc.
+	use("tpope/vim-surround")
 
-  -- Smooth scrolling
-  -- use("karb94/neoscroll.nvim")
+	-- undo tree
+	use("mbbill/undotree")
 
-  -- Minimap
-  use("gorbit99/codewindow.nvim")
+	-- git wrapper
+	use("tpope/vim-fugitive")
+
+	-- code formatting
+	use("sbdchd/neoformat")
+
+	-- colour coded parentheses
+	use("luochen1990/rainbow")
+
+	-- discord presence
+	use("andweeb/presence.nvim")
 end)

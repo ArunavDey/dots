@@ -79,6 +79,11 @@ _G.packer_plugins = {
     path = "/home/arunav/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
+  ["bufferline.nvim"] = {
+    loaded = true,
+    path = "/home/arunav/.local/share/nvim/site/pack/packer/start/bufferline.nvim",
+    url = "https://github.com/akinsho/bufferline.nvim"
+  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/home/arunav/.local/share/nvim/site/pack/packer/start/cmp-buffer",
@@ -104,20 +109,15 @@ _G.packer_plugins = {
     path = "/home/arunav/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
-  ["codewindow.nvim"] = {
+  ["code-minimap"] = {
     loaded = true,
-    path = "/home/arunav/.local/share/nvim/site/pack/packer/start/codewindow.nvim",
-    url = "https://github.com/gorbit99/codewindow.nvim"
+    path = "/home/arunav/.local/share/nvim/site/pack/packer/start/code-minimap",
+    url = "https://github.com/wfxr/code-minimap"
   },
   ["friendly-snippets"] = {
     loaded = true,
     path = "/home/arunav/.local/share/nvim/site/pack/packer/start/friendly-snippets",
     url = "https://github.com/rafamadriz/friendly-snippets"
-  },
-  ["gruvbox-material"] = {
-    loaded = true,
-    path = "/home/arunav/.local/share/nvim/site/pack/packer/start/gruvbox-material",
-    url = "https://github.com/sainnhe/gruvbox-material"
   },
   ["gruvbox.nvim"] = {
     loaded = true,
@@ -148,6 +148,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/arunav/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
+  },
+  ["minimap.vim"] = {
+    loaded = true,
+    path = "/home/arunav/.local/share/nvim/site/pack/packer/start/minimap.vim",
+    url = "https://github.com/wfxr/minimap.vim"
   },
   neoformat = {
     loaded = true,
