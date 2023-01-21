@@ -9,35 +9,34 @@
 font pango: JetBrainsMono Nerd Font 10
 set $mod Mod4
 focus_follows_mouse no
+exec_always --no-startup-id feh --bg-fill ~/Pictures/Wallpapers/minimal-forest.jpg
+exec_always --no-startup-id ~/.config/polybar/scripts/setup1.sh
 
-###################
-##### COLOURS #####
-###################
-set $bg-color             #b8bb26
-set $text-color           #282828
-set $inactive-bg-color    #282828
-set $inactive-text-color  #fbf1c7
-set $urgent-bg-color      #fb4934
 
-######################
-###### SHORTCUTS #####
-######################
+#####################
+###### KEYBINDS #####
+#####################
 # bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 bindsym $mod+Return exec alacritty
 bindsym $mod+Shift+p exec polybar-msg cmd toggle
 bindsym $mod+b exec brave
 bindsym $mod+Shift+b exec brave --incognito
-bindsym $mod+f exec pcmanfm
-bindsym $mod+m exec thunderbird
+bindsym $mod+f exec thunar
 bindsym $mod+space exec ~/.config/i3/scripts/rundmenu.sh
+# bindsym $mod+space exec ~/.config/i3/scripts/runrofi.sh
 bindsym $mod+Print exec ~/.config/i3/scripts/screenshot.sh
-bindsym $mod+Shift+Print ~/.config/i3/scripts/windowshot.sh
+# bindsym $mod+Shift+Print ~/.config/i3/scripts/windowshot.sh
 bindsym $mod+Shift+x exec ~/.config/i3/scripts/runi3lock.sh
+
+
+###########################
+###### MEDIA CONTROLS #####
+###########################
 # bindsym XF86MonBrightnessUp exec light -A 5
 # bindsym XF86MonBrightnessDown exec light -U 5
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +1%
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -1%
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5%
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5%
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle
 bindsym XF86AudioPlay exec playerctl play-pause
@@ -125,11 +124,12 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 ##### SESSION SETTINGS #####
 ############################
 mode "exit"{
-    bindsym l exec i3-msg exit
-    bindsym r exec systemctl reboot
-    bindsym s exec shutdown now
-    bindsym Escape mode "default"
-    bindsym Return mode "default"
+  bindsym l exec i3-msg exit
+  bindsym r exec systemctl reboot
+  bindsym s exec shutdown now
+  bindsym Escape mode "default"
+  bindsym Return mode "default"
+  bindsym $mod+Shift+e mode "default"
 }
 bindsym $mod+Shift+e mode "exit"
 
@@ -139,24 +139,27 @@ bindsym $mod+Shift+e mode "exit"
 ###########################
 mode "resize" {
   bindsym h resize shrink width 10 px or 10 ppt
-    bindsym j resize grow height 10 px or 10 ppt
-    bindsym k resize shrink height 10 px or 10 ppt
-    bindsym l resize grow width 10 px or 10 ppt
+  bindsym j resize grow height 10 px or 10 ppt
+  bindsym k resize shrink height 10 px or 10 ppt
+  bindsym l resize grow width 10 px or 10 ppt
 
-    bindsym Left resize shrink width 2 px or 2 ppt
-    bindsym Down resize grow height 2 px or 2 ppt
-    bindsym Up resize shrink height 2 px or 2 ppt
-    bindsym Right resize grow width 2 px or 2 ppt
-
-    bindsym Return mode "default"
-    bindsym Escape mode "default"
-    bindsym $mod+r mode "default"
+  bindsym Return mode "default"
+  bindsym Escape mode "default"
+  bindsym $mod+r mode "default"
 }
 bindsym $mod+r mode "resize"
 
-gaps inner 8
-# gaps top 52
-# smart_gaps on
+gaps inner 16
+
+###################
+##### COLOURS #####
+###################
+set $bg-color             #b8bb26
+set $text-color           #282828
+set $inactive-bg-color    #282828
+set $inactive-text-color  #fbf1c7
+set $urgent-bg-color      #fb4934
+
 
 ###########################
 ##### BORDER SETTINGS #####
