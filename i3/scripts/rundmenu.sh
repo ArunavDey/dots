@@ -1,11 +1,10 @@
 #!/bin/sh
 
 dmenu_run -i \
-  -nb "#1d2021" \
-  -nf "#a89984" \
-  -sb "#282828" \
-  -sf "#fabd2f" \
-  -fn "JetBrainsMono Nerd Font-12" \
+  -nb "#000000" \
+  -nf "#777777" \
+  -sb "#000000" \
+  -sf "#ffffff" \
+  -fn "JetBrainsMono Nerd Font Mono-10" \
   -p "search" \
-  -b
- 
+  # -b

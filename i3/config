@@ -9,8 +9,10 @@
 font pango: JetBrainsMono Nerd Font 10
 set $mod Mod4
 focus_follows_mouse no
-exec_always --no-startup-id feh --bg-fill ~/Pictures/Wallpapers/minimal-forest.jpg
-exec_always --no-startup-id ~/.config/polybar/scripts/setup1.sh
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+exec_always --no-startup-id feh --bg-fill /mnt/hdd/Wallpapers/minimal-forest.jpg &
+# exec_always --no-startup-id ~/.config/polybar/scripts/bars/fancy_dark.sh &
+exec_always --no-startup-id ~/.config/polybar/scripts/bars/minimal_dark.sh &
 
 
 #####################
@@ -18,13 +20,13 @@ exec_always --no-startup-id ~/.config/polybar/scripts/setup1.sh
 #####################
 # bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
-bindsym $mod+Return exec alacritty
+bindsym $mod+Return exec kitty
 bindsym $mod+Shift+p exec polybar-msg cmd toggle
 bindsym $mod+b exec brave
 bindsym $mod+Shift+b exec brave --incognito
-bindsym $mod+f exec thunar
+bindsym $mod+f exec pcmanfm
 bindsym $mod+space exec ~/.config/i3/scripts/rundmenu.sh
-# bindsym $mod+space exec ~/.config/i3/scripts/runrofi.sh
+bindsym $mod+Tab exec ~/.config/i3/scripts/runrofi.sh
 bindsym $mod+Print exec ~/.config/i3/scripts/screenshot.sh
 # bindsym $mod+Shift+Print ~/.config/i3/scripts/windowshot.sh
 bindsym $mod+Shift+x exec ~/.config/i3/scripts/runi3lock.sh
@@ -149,25 +151,25 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
-gaps inner 16
+gaps inner 10
 
 ###################
 ##### COLOURS #####
 ###################
 set $bg-color             #b8bb26
 set $text-color           #282828
-set $inactive-bg-color    #282828
-set $inactive-text-color  #fbf1c7
-set $urgent-bg-color      #fb4934
+set $inactive-bg-color    #555555
+set $inactive-text-color  #ffffff
+set $urgent-bg-color      #ff8888
 
 
 ###########################
 ##### BORDER SETTINGS #####
 ###########################
 #colorclass             border              background          text                  indicator
-client.focused          $bg-color           $bg-color           $text-color           #fbf1c7
+client.focused          $bg-color           $bg-color           $text-color           #ffffff
 client.unfocused        $inactive-bg-color  $inactive-bg-color  $inactive-text-color  #282828
 client.focused_inactive $inactive-bg-color  $inactive-bg-color  $inactive-text-color  #282828
-client.urgent           $urgent-bg-color    $urgent-bg-color    $text-color           #fb4934
+client.urgent           $urgent-bg-color    $urgent-bg-color    $text-color           #ff8888
 
-for_window [class="^.*"] border pixel 4
+for_window [class="^.*"] border pixel 1

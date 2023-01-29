@@ -3,23 +3,23 @@
 i3lock -e -f -k \
   --indicator \
   --radius 160 \
-  --color=1d2021 \
-  --inside-color=282828 \
-  --ring-color=fe8019 \
-  --layout-color=fbf1c7 \
-  --time-color=fbf1c7 \
-  --date-color=e9e0bb \
-  --greeter-color=fbf1c7 \
-  --insidever-color=282828 \
-  --ringver-color=fabd2f \
-  --insidewrong-color=282828 \
-  --ringwrong-color=fb4934 \
+  --color=000000 \
+  --inside-color=111111 \
+  --ring-color=aaaaaa \
+  --layout-color=ffffff \
+  --time-color=ffffff \
+  --date-color=ffffff \
+  --greeter-color=ffffff \
+  --insidever-color=111111 \
+  --ringver-color=ddddff \
+  --insidewrong-color=111111 \
+  --ringwrong-color=ff8888 \
   --line-uses-inside \
-  --keyhl-color=fbf1c7 \
+  --keyhl-color=ffffff \
   --separator-color=fe8019 \
-  --verif-color=fbf1c7 \
-  --wrong-color=fbf1c7 \
-  --modif-color=fbf1c7 \
+  --verif-color=ffffff \
+  --wrong-color=ffffff \
+  --modif-color=ffffff \
   --date-str="%a %Y-%m-%d" \
   --verif-text="Authorising" \
   --wrong-text="Try Again" \

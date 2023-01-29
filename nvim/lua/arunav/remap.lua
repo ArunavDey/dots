@@ -3,6 +3,11 @@
 --------------------------------------
 local vim = vim
 
+-- vim.keymap.set("n", "<leader>sp", vim.opt.spell)
+
+-- NERDTree keybind
+vim.keymap.set("n", "<leader>nn", vim.cmd.NERDTreeToggle)
+
 -- Neoformat keybind
 vim.keymap.set("n", "<leader>nf", vim.cmd.Neoformat)
 
@@ -29,7 +34,7 @@ vim.keymap.set("n", "<leader>gs", vim.cmd.Git)
 vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle)
 
 -- Bufferlin keybinds
-vim.keymap.set("n", "<leader>bb", vim.cmd.BufferLinePick)
-vim.keymap.set("n", "<leader>bn", vim.cmd.BufferLineCyclePrev)
-vim.keymap.set("n", "<leader>bN", vim.cmd.BufferLineCycleNext)
-vim.keymap.set("n", "<leader>bc", vim.cmd.BufferLinePickClose)
+-- vim.keymap.set("n", "<leader>bb", vim.cmd.BufferLinePick)
+-- vim.keymap.set("n", "<leader>bn", vim.cmd.BufferLineCyclePrev)
+-- vim.keymap.set("n", "<leader>bN", vim.cmd.BufferLineCycleNext)
+-- vim.keymap.set("n", "<leader>bc", vim.cmd.BufferLinePickClose)

@@ -16,6 +16,7 @@ o.background = "dark" -- used for highlight color
 o.number = true -- shows lines numbers
 o.clipboard = "unnamedplus" -- copy to clipboard, need xclip
 o.termguicolors = true
+o.path:append '**'
 
 -- Folding
 -- o.foldmethod = "indent" -- how to fold
@@ -47,9 +48,10 @@ g.rainbow_active = 1
 g.python3_host_prog = "python"
 g.loaded_perl_provider = 0
 g.loaded_ruby_provider = 0
+g.NERDTreeShowLineNumbers = 1
 
 -- Minimap
-g.minimap_width = 8
-g.minimap_auto_start = 1
-g.minimap_base_highlight = "Normal"
-g.minimap_git_colors = 1
+-- g.minimap_width = 8
+-- g.minimap_auto_start = 1
+-- g.minimap_base_highlight = "Normal"
+-- g.minimap_git_colors = 1

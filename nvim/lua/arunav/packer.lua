@@ -10,14 +10,13 @@ return require("packer").startup(function(use)
 
 	---------- Colorschemes --------
 	-- * with treesitter support
-	use("ellisonleao/gruvbox.nvim")
+	use("morhetz/gruvbox")
+  use("luisiacc/gruvbox-baby")
+  use("sainnhe/gruvbox-material")
 	use("rebelot/kanagawa.nvim")
 	use("sainnhe/sonokai")
 	use("folke/tokyonight.nvim")
 	use("glepnir/zephyr-nvim")
-	vim.cmd.colorscheme("gruvbox")
-	vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-	vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 
 	---------- Fuzzy Finder --------
 	-- Telescope
@@ -68,50 +67,32 @@ return require("packer").startup(function(use)
 		},
 	})
 
-	---------- Visual stuff --------
-	-- status line
-	use({
-		"nvim-lualine/lualine.nvim",
-		requires = { "nvim-tree/nvim-web-devicons", opt = true },
-	})
-
-	-- buffer line
-	use({
-		"akinsho/bufferline.nvim",
-		tag = "v3.*",
-		requires = "nvim-tree/nvim-web-devicons",
-	})
-
-	-- minimap
-	-- use("gorbit99/codewindow.nvim")
-	use({
-		"wfxr/minimap.vim",
-	})
+	---------- File Browser --------
+  use({
+    "preservim/nerdtree",
+  })
 
 	---------- Miscellaneous --------
-	-- commentary support
+	-- comments support
 	use("tpope/vim-commentary")
+
+	-- surround code with brackets, tags, etc.
+	use("tpope/vim-surround")
+
+	-- git wrapper
+	use("tpope/vim-fugitive")
 
 	-- Brackets, quotes, etc. completion
 	use({
 		"windwp/nvim-autopairs",
 	})
 
-	-- surround code with brackets, tags, etc.
-	use("tpope/vim-surround")
-
 	-- undo tree
 	use("mbbill/undotree")
-
-	-- git wrapper
-	use("tpope/vim-fugitive")
 
 	-- code formatting
 	use("sbdchd/neoformat")
 
 	-- colour coded parentheses
 	use("luochen1990/rainbow")
-
-	-- discord presence
-	use("andweeb/presence.nvim")
 end)
