@@ -7,6 +7,8 @@ echo "Updating pkglist"
 pacman -Qne > ~/GitHub/dots/.pkglist.txt
 
 echo "Copying configs:"
+echo -e "\txinit"
+cp ~/.xinitrc ~/GitHub/dots/
 echo -e "\tneovim"
 cp -r ~/.config/nvim ~/GitHub/dots/
 echo -e "\talacritty"

@@ -202,7 +202,7 @@ vifm 0.12.1-1
 virtualbox 7.0.6-1
 virtualbox-host-modules-arch 7.0.6-3
 vlc 3.0.18-6
-w3m 0.5.3.git20220409_1-2
+w3m 0.5.3.git20230121_1-1
 wget 1.21.3-1
 which 2.21-5
 wine 8.0-2
