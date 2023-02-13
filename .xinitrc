@@ -1,11 +1,18 @@
 #!/bin/sh
 
+if [ -d /etc/X11/xinit/xinitrc.d ] ; then
+ for f in /etc/X11/xinit/xinitrc.d/?*.sh ; do
+  [ -x "$f" ] && . "$f"
+ done
+ unset f
+fi
+
 #####################################
 ##### Desktop Environment Setup #####
 #####################################
 picom & # display compositor
 dunst & # notification daemon
-xss-lock --transfer-sleep-lock -- /home/arunav/.config/i3/scripts/runi3lock.sh --nofork & # enable using external lock as X screen saver
+xss-lock --transfer-sleep-lock -- i3lock --nofork & # enable using external lock as X screen saver
 nm-applet & # network manager
 blueman-applet & # bluetooth manager
 xset s off & # disable screen saver
@@ -17,6 +24,3 @@ xrandr --output HDMI-0 --mode 1920x1080 --rate 144 --primary & # display setting
 # xinput set-prop 15 302 281 & # device settings
 
 exec i3
-# export XDG_SESSION_TYPE=x11
-# export GDK_BACKEND=x11
-# exec gnome-session

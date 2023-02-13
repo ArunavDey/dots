@@ -2,7 +2,7 @@
 ---------- Auto commands --------
 ---------------------------------
 local vim = vim
-vim.cmd.colorscheme("zephyr")
+vim.cmd.colorscheme("gruvbox")
 
 vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
 vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })

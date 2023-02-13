@@ -29,4 +29,9 @@ cp -r ~/.config/dunst ~/GitHub/dots/
 echo "Backing up configs to /mnt/hdd/dots"
 cp -r ~/GitHub/dots/* /mnt/hdd/dots/
 
+echo "Pushing changes to https://github.com/ArunavDey/dots"
+git add -A
+git commit -m "update dots"
+git push
+
 echo "Done!"
