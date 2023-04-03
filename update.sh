@@ -1,33 +1,33 @@
 #!/bin/sh
 
 echo "Updating foreignpkglist"
-pacman -Qme > dots/.foreignpkglist.txt
+pacman -Qme > .foreignpkglist.txt
 
 echo "Updating pkglist"
-pacman -Qne > dots/.pkglist.txt
+pacman -Qne > .pkglist.txt
 
 echo "Copying configs:"
 echo -e "\txinit"
-cp ~/.xinitrc ./dots/
+cp ~/.xinitrc ./
 echo -e "\tneovim"
-cp -r ~/.config/nvim ./dots/
+cp -r ~/.config/nvim ./
 echo -e "\talacritty"
-cp -r ~/.config/alacritty ./dots/
+cp -r ~/.config/alacritty ./
 echo -e "\ti3"
-cp -r ~/.config/i3 ./dots/
+cp -r ~/.config/i3 ./
 echo -e "\tpolybar"
-cp -r ~/.config/polybar ./dots/
+cp -r ~/.config/polybar ./
 echo -e "\tzathura"
-cp -r ~/.config/zathura ./dots/
+cp -r ~/.config/zathura ./
 echo -e "\ttmux"
-cp -r ~/.config/tmux/tmux.conf ./dots/tmux/
+cp -r ~/.config/tmux/tmux.conf ./
 echo -e "\tpicom"
-cp -r ~/.config/picom ./dots/
+cp -r ~/.config/picom ./
 echo -e "\tdunst"
-cp -r ~/.config/dunst ./dots/
+cp -r ~/.config/dunst ./
 
 echo "Backing up configs to /mnt/hdd/dots"
-sudo mkdir /mnt/hdd/dots; cp -r ./dots/* /mnt/hdd/dots/
+sudo mkdir /mnt/hdd/dots; cp -r ./* /mnt/hdd/dots/
 
 echo "Pushing changes to https://github.com/ArunavDey/dots"
 git add -A
