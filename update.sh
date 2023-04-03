@@ -1,10 +1,10 @@
 #!/bin/sh
 
 echo "Updating foreignpkglist"
-pacman -Qme > ./dots/.foreignpkglist.txt
+pacman -Qme > dots/.foreignpkglist.txt
 
 echo "Updating pkglist"
-pacman -Qne > ./dots/.pkglist.txt
+pacman -Qne > dots/.pkglist.txt
 
 echo "Copying configs:"
 echo -e "\txinit"
