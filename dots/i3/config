@@ -1,0 +1,178 @@
+#############################
+##### AUTHOR: Arunav Dey ####
+#############################
+
+
+############################
+##### GENERAL SETTINGS #####
+############################
+font pango: JetBrainsMono Nerd Font 10
+set $mod Mod4
+focus_follows_mouse no
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+exec_always --no-startup-id feh --bg-fill ~/Downloads/forest.jpg &
+exec_always --no-startup-id ~/.config/polybar/scripts/bars/fancy_dark.sh &
+exec_always --no-startup-id xinput set-prop 15 304 1 &
+exec_always --no-startup-id xinput set-prop 15 283 1 &
+# exec_always --no-startup-id ~/.config/polybar/scripts/bars/minimal_dark.sh &
+
+
+#####################
+###### KEYBINDS #####
+#####################
+# bindsym $mod+Shift+c reload
+bindsym $mod+Shift+r restart
+bindsym $mod+Return exec alacritty
+bindsym $mod+Shift+p exec polybar-msg cmd toggle
+bindsym $mod+b exec brave
+bindsym $mod+Shift+b exec brave --incognito
+bindsym $mod+f exec thunar
+bindsym $mod+c exec code
+bindsym $mod+space exec ~/.config/i3/scripts/rundmenu.sh
+bindsym $mod+Tab exec ~/.config/i3/scripts/runrofi.sh
+bindsym $mod+Print exec ~/.config/i3/scripts/screenshot.sh
+# bindsym $mod+Shift+Print ~/.config/i3/scripts/windowshot.sh
+bindsym $mod+Shift+x exec ~/.config/i3/scripts/runi3lock.sh
+
+
+###########################
+###### MEDIA CONTROLS #####
+###########################
+bindsym XF86MonBrightnessUp exec xbacklight -inc 5
+bindsym XF86MonBrightnessDown exec xbacklight -dec 5
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5%
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5%
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
+bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle
+bindsym XF86AudioPlay exec playerctl play-pause
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
+
+
+######################################
+###### i3 MOVEMENTS AND COMMANDS #####
+######################################
+floating_modifier $mod
+bindsym $mod+Shift+q kill
+
+bindsym $mod+h            focus left
+bindsym $mod+j            focus down
+bindsym $mod+k            focus up
+bindsym $mod+l            focus right
+bindsym $mod+Left         focus left
+bindsym $mod+Down         focus down
+bindsym $mod+Up           focus up
+bindsym $mod+Right        focus right
+
+bindsym $mod+Shift+h      move left
+bindsym $mod+Shift+j      move down
+bindsym $mod+Shift+k      move up
+bindsym $mod+Shift+l      move right
+bindsym $mod+Shift+Left   move left
+bindsym $mod+Shift+Down   move down
+bindsym $mod+Shift+Up     move up
+bindsym $mod+Shift+Right  move right
+
+bindsym $mod+u split h
+bindsym $mod+y split v
+
+bindsym $mod+Shift+f fullscreen toggle
+
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+
+bindsym $mod+Shift+space floating toggle
+
+bindsym $mod+a focus parent
+bindsym $mod+d focus child
+
+
+#########################
+##### i3 WORKSPACES #####
+#########################
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
+set $ws9 "9"
+set $ws10 "10"
+
+bindsym $mod+1 workspace $ws1
+bindsym $mod+2 workspace $ws2
+bindsym $mod+3 workspace $ws3
+bindsym $mod+4 workspace $ws4
+bindsym $mod+5 workspace $ws5
+bindsym $mod+6 workspace $ws6
+bindsym $mod+7 workspace $ws7
+bindsym $mod+8 workspace $ws8
+bindsym $mod+9 workspace $ws9
+bindsym $mod+0 workspace $ws10
+
+bindsym $mod+Shift+1 move container to workspace $ws1
+bindsym $mod+Shift+2 move container to workspace $ws2
+bindsym $mod+Shift+3 move container to workspace $ws3
+bindsym $mod+Shift+4 move container to workspace $ws4
+bindsym $mod+Shift+5 move container to workspace $ws5
+bindsym $mod+Shift+6 move container to workspace $ws6
+bindsym $mod+Shift+7 move container to workspace $ws7
+bindsym $mod+Shift+8 move container to workspace $ws8
+bindsym $mod+Shift+9 move container to workspace $ws9
+bindsym $mod+Shift+0 move container to workspace $ws10
+
+
+############################
+##### SESSION SETTINGS #####
+############################
+mode "exit"{
+  bindsym l exec i3-msg exit
+  bindsym r exec systemctl reboot
+  bindsym s exec shutdown now
+  bindsym Escape mode "default"
+  bindsym Return mode "default"
+  bindsym $mod+Shift+e mode "default"
+}
+bindsym $mod+Shift+e mode "exit"
+
+
+###########################
+##### WINDOW SETTINGS #####
+###########################
+mode "resize" {
+  bindsym h resize shrink width 10 px or 10 ppt
+  bindsym j resize grow height 10 px or 10 ppt
+  bindsym k resize shrink height 10 px or 10 ppt
+  bindsym l resize grow width 10 px or 10 ppt
+
+  bindsym Return mode "default"
+  bindsym Escape mode "default"
+  bindsym $mod+r mode "default"
+}
+bindsym $mod+r mode "resize"
+
+gaps inner 10
+
+###################
+##### COLOURS #####
+###################
+set $bg-color             #b8bb26
+set $text-color           #282828
+set $inactive-bg-color    #555555
+set $inactive-text-color  #ffffff
+set $urgent-bg-color      #ff8888
+
+
+###########################
+##### BORDER SETTINGS #####
+###########################
+#colorclass             border              background          text                  indicator
+client.focused          $bg-color           $bg-color           $text-color           #ffffff
+client.unfocused        $inactive-bg-color  $inactive-bg-color  $inactive-text-color  #282828
+client.focused_inactive $inactive-bg-color  $inactive-bg-color  $inactive-text-color  #282828
+client.urgent           $urgent-bg-color    $urgent-bg-color    $text-color           #ff8888
+
+for_window [class="^.*"] border pixel 1

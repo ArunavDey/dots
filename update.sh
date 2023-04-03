@@ -1,33 +1,33 @@
 #!/bin/sh
 
 echo "Updating foreignpkglist"
-pacman -Qme > ~/GitHub/dots/.foreignpkglist.txt
+pacman -Qme > ./dots/.foreignpkglist.txt
 
 echo "Updating pkglist"
-pacman -Qne > ~/GitHub/dots/.pkglist.txt
+pacman -Qne > ./dots/.pkglist.txt
 
 echo "Copying configs:"
 echo -e "\txinit"
-cp ~/.xinitrc ~/GitHub/dots/
+cp ~/.xinitrc ./dots/
 echo -e "\tneovim"
-cp -r ~/.config/nvim ~/GitHub/dots/
+cp -r ~/.config/nvim ./dots/
 echo -e "\talacritty"
-cp -r ~/.config/alacritty ~/GitHub/dots/
+cp -r ~/.config/alacritty ./dots/
 echo -e "\ti3"
-cp -r ~/.config/i3 ~/GitHub/dots/
+cp -r ~/.config/i3 ./dots/
 echo -e "\tpolybar"
-cp -r ~/.config/polybar ~/GitHub/dots/
+cp -r ~/.config/polybar ./dots/
 echo -e "\tzathura"
-cp -r ~/.config/zathura ~/GitHub/dots/
+cp -r ~/.config/zathura ./dots/
 echo -e "\ttmux"
-cp -r ~/.config/tmux/tmux.conf ~/GitHub/dots/tmux/
+cp -r ~/.config/tmux/tmux.conf ./dots/tmux/
 echo -e "\tpicom"
-cp -r ~/.config/picom ~/GitHub/dots/
+cp -r ~/.config/picom ./dots/
 echo -e "\tdunst"
-cp -r ~/.config/dunst ~/GitHub/dots/
+cp -r ~/.config/dunst ./dots/
 
 echo "Backing up configs to /mnt/hdd/dots"
-sudo mkdir /mnt/hdd/dots; cp -r ~/GitHub/dots/* /mnt/hdd/dots/
+sudo mkdir /mnt/hdd/dots; cp -r ./dots/* /mnt/hdd/dots/
 
 echo "Pushing changes to https://github.com/ArunavDey/dots"
 git add -A
