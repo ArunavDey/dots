@@ -21,10 +21,10 @@ vim.keymap.set("n", "<leader>ff", telescope_builtin.find_files, { noremap = true
 vim.keymap.set("n", "<leader>fg", telescope_builtin.live_grep, { noremap = true })
 vim.keymap.set("n", "<leader>fh", telescope_builtin.help_tags, { noremap = true })
 vim.keymap.set(
-	"n",
-	"<leader>fb",
-	"<cmd>lua require 'telescope'.extensions.file_browser.file_browser()<CR>",
-	{ noremap = true }
+  "n",
+  "<leader>fb",
+  "<cmd>lua require 'telescope'.extensions.file_browser.file_browser()<CR>",
+  { noremap = true }
 )
 
 -- Fugitive keybinds
@@ -33,8 +33,5 @@ vim.keymap.set("n", "<leader>gs", vim.cmd.Git)
 -- Undotree keybinds
 vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle)
 
--- Bufferlin keybinds
--- vim.keymap.set("n", "<leader>bb", vim.cmd.BufferLinePick)
--- vim.keymap.set("n", "<leader>bn", vim.cmd.BufferLineCyclePrev)
--- vim.keymap.set("n", "<leader>bN", vim.cmd.BufferLineCycleNext)
--- vim.keymap.set("n", "<leader>bc", vim.cmd.BufferLinePickClose)
+-- Blamer keybinds
+vim.keymap.set("n", "<leader>gb", vim.cmd.BlamerToggle)
