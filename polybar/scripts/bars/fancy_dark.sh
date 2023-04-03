@@ -12,3 +12,4 @@ polybar -q network -c $HOME/.config/polybar/bars/fancy_dark.ini &
 polybar -q workspaces -c $HOME/.config/polybar/bars/fancy_dark.ini &
 polybar -q monitor -c $HOME/.config/polybar/bars/fancy_dark.ini &
 polybar -q volume -c $HOME/.config/polybar/bars/fancy_dark.ini &
+polybar -q battery -c $HOME/.config/polybar/bars/fancy_dark.ini &

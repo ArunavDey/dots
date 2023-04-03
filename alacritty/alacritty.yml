@@ -14,37 +14,21 @@ window:
 ##### FONT SETTINGS #####
 #########################
 font:
-  size: 13.0
+  size: 8.0
   normal:
     family: JetBrainsMono Nerd Font
-    # family: GohuFont Nerd Font
-    # family: FiraCode Nerd Font
-    # family: ProFontIIx Nerd Font
-    # family: NotoMono Nerd Font
     style: Regular
 
   bold:
     family: JetBrainsMono Nerd Font
-    # family: GohuFont Nerd Font
-    # family: FiraCode Nerd Font
-    # family: ProFontIIx Nerd Font
-    # family: NotoMono Nerd Font
     style: Bold
 
   italic:
     family: JetBrainsMono Nerd Font
-    # family: GohuFont Nerd Font
-    # family: FiraCode Nerd Font
-    # family: ProFontIIx Nerd Font
-    # family: NotoMono Nerd Font
     style: Italic
 
   bold_italic:
     family: JetBrainsMono Nerd Font
-    # family: GohuFont Nerd Font
-    # family: FiraCode Nerd Font
-    # family: ProFontIIx Nerd Font
-    # family: NotoMono Nerd Font
     style: Bold Italic
 
 ########################

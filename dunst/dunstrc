@@ -3,8 +3,8 @@
     indicate_hidden = yes
     shrink = true
 
-    width = 300
-    height = 300
+    width = 160
+    height = 160
 
     alignment = left
     vertical_alignment = center
@@ -28,7 +28,7 @@
 
     sort = yes
 
-    font = JetBrainsMono Nerd Font 10
+    font = JetBrainsMono Nerd Font 6
 
     line_height = 0
 

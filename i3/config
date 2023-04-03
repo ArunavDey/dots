@@ -10,9 +10,11 @@ font pango: JetBrainsMono Nerd Font 10
 set $mod Mod4
 focus_follows_mouse no
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
-exec_always --no-startup-id feh --bg-fill /mnt/hdd/Wallpapers/minimal-forest.jpg &
-# exec_always --no-startup-id ~/.config/polybar/scripts/bars/fancy_dark.sh &
-exec_always --no-startup-id ~/.config/polybar/scripts/bars/minimal_dark.sh &
+exec_always --no-startup-id feh --bg-fill ~/Downloads/forest.jpg &
+exec_always --no-startup-id ~/.config/polybar/scripts/bars/fancy_dark.sh &
+exec_always --no-startup-id xinput set-prop 15 304 1 &
+exec_always --no-startup-id xinput set-prop 15 283 1 &
+# exec_always --no-startup-id ~/.config/polybar/scripts/bars/minimal_dark.sh &
 
 
 #####################
@@ -20,11 +22,12 @@ exec_always --no-startup-id ~/.config/polybar/scripts/bars/minimal_dark.sh &
 #####################
 # bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
-bindsym $mod+Return exec kitty
+bindsym $mod+Return exec alacritty
 bindsym $mod+Shift+p exec polybar-msg cmd toggle
 bindsym $mod+b exec brave
 bindsym $mod+Shift+b exec brave --incognito
-bindsym $mod+f exec pcmanfm
+bindsym $mod+f exec thunar
+bindsym $mod+c exec code
 bindsym $mod+space exec ~/.config/i3/scripts/rundmenu.sh
 bindsym $mod+Tab exec ~/.config/i3/scripts/runrofi.sh
 bindsym $mod+Print exec ~/.config/i3/scripts/screenshot.sh
@@ -35,8 +38,8 @@ bindsym $mod+Shift+x exec ~/.config/i3/scripts/runi3lock.sh
 ###########################
 ###### MEDIA CONTROLS #####
 ###########################
-# bindsym XF86MonBrightnessUp exec light -A 5
-# bindsym XF86MonBrightnessDown exec light -U 5
+bindsym XF86MonBrightnessUp exec xbacklight -inc 5
+bindsym XF86MonBrightnessDown exec xbacklight -dec 5
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5%
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5%
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
