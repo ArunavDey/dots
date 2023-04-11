@@ -11,8 +11,8 @@ set $mod Mod4
 focus_follows_mouse no
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 exec_always --no-startup-id feh --bg-fill ~/Downloads/splash.jpg &
-exec_always --no-startup-id xinput set-prop 15 311 1 &
-exec_always --no-startup-id xinput set-prop 15 284 1 &
+exec_always --no-startup-id xinput set-prop 15 310 1 &
+exec_always --no-startup-id xinput set-prop 15 283 1 &
 # exec_always --no-startup-id ~/.config/polybar/scripts/bars/fancy_dark.sh &
 exec_always --no-startup-id ~/.config/polybar/scripts/bars/minimal_dark.sh &
 
