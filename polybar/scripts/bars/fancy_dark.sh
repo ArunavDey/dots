@@ -3,7 +3,7 @@
 killall -q polybar
 
 # wait for the processes to be shut down
-while pgrep -u $UID -x polybar > /dev/null; do sleep 1; done
+# while pgrep -u $UID -x polybar > /dev/null; do sleep 1; done
 
 
 polybar -q back -c $HOME/.config/polybar/bars/fancy_dark.ini &
