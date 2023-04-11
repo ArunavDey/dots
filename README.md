@@ -2,7 +2,7 @@
 
 ## Author: Arunav Dey
 
-## Date: 18 January 2023
+## Date: 11 April 2023
 
 These are the dotfiles for most of my frequent applications.
 
