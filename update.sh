@@ -11,8 +11,6 @@ echo -e "\txinit"
 cp ~/.xinitrc ./
 echo -e "\tneovim"
 cp -r ~/.config/nvim ./
-echo -e "\talacritty"
-cp -r ~/.config/alacritty ./
 echo -e "\tkitty"
 cp -r ~/.config/kitty ./
 echo -e "\ti3"
