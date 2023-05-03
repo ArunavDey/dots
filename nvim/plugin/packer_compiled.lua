@@ -84,6 +84,11 @@ _G.packer_plugins = {
     path = "/home/arunav/.local/share/nvim/site/pack/packer/start/blamer.nvim",
     url = "https://github.com/apzelos/blamer.nvim"
   },
+  chadtree = {
+    loaded = true,
+    path = "/home/arunav/.local/share/nvim/site/pack/packer/start/chadtree",
+    url = "https://github.com/ms-jpq/chadtree"
+  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/home/arunav/.local/share/nvim/site/pack/packer/start/cmp-buffer",
@@ -154,11 +159,6 @@ _G.packer_plugins = {
     path = "/home/arunav/.local/share/nvim/site/pack/packer/start/neoformat",
     url = "https://github.com/sbdchd/neoformat"
   },
-  nerdtree = {
-    loaded = true,
-    path = "/home/arunav/.local/share/nvim/site/pack/packer/start/nerdtree",
-    url = "https://github.com/preservim/nerdtree"
-  },
   ["nvim-autopairs"] = {
     loaded = true,
     path = "/home/arunav/.local/share/nvim/site/pack/packer/start/nvim-autopairs",
@@ -228,6 +228,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/arunav/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
     url = "https://github.com/folke/tokyonight.nvim"
+  },
+  ["transparent.nvim"] = {
+    loaded = true,
+    path = "/home/arunav/.local/share/nvim/site/pack/packer/start/transparent.nvim",
+    url = "https://github.com/xiyaowong/transparent.nvim"
   },
   undotree = {
     loaded = true,

@@ -60,3 +60,5 @@ g.blamer_show_in_visual_modes = 0
 -- g.minimap_auto_start = 1
 -- g.minimap_base_highlight = "Normal"
 -- g.minimap_git_colors = 1
+
+-- g.chadtree_settings.theme.icon_glyph_set = "devicons"

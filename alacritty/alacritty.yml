@@ -7,7 +7,8 @@ window:
   padding:
     x: 16
     y: 16
-  opacity: 1
+  # opacity: 0.32
+  dynamic_title: false
 
 #########################
 ##### FONT SETTINGS #####

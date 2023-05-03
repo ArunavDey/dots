@@ -9,5 +9,5 @@ else
     echo "%{F#a89984}bt"
   fi
   # echo "󰂱"
-  echo "bt"
+  echo "%{F#b8bb26}bt"
 fi

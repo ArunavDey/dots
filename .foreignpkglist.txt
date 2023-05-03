@@ -1,11 +1,12 @@
-brave-bin 1:1.49.132-1
+brave-bin 1:1.50.125-1
 cava 0.8.3-1
 gotop 4.2.0-1
 i3lock-color 2.13.c.4-1
 mongodb-bin 6.0.5-1
 pfetch 0.6.0-3
 picom-ibhagwan-git 1578_Next.297.gc4107bb_2021.11.03-1
-plymouth-git 22.02.122.r170.ge8e19371-1
-spotify 1:1.1.84.716-13
-visual-studio-code-bin 1.77.0-1
-yay 11.3.2-1
+plymouth-git 22.02.122.r170.ge8e19371-3
+spotify 1:1.2.9.743-1
+unimatrix-git r69.4cc40bb-1
+visual-studio-code-bin 1.77.3-1
+yay 12.0.4-1
