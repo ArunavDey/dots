@@ -13,6 +13,8 @@ echo -e "\tneovim"
 cp -r ~/.config/nvim ./
 echo -e "\talacritty"
 cp -r ~/.config/alacritty ./
+echo -e "\tkitty"
+cp -r ~/.config/kitty ./
 echo -e "\ti3"
 cp -r ~/.config/i3 ./
 echo -e "\tpolybar"
