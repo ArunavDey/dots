@@ -32,9 +32,8 @@ return require("packer").startup(function(use)
 			{ "nvim-telescope/telescope-fzf-native.nvim", run = "make" },
 			-- adds a file browser on top of telescope
 			{ "nvim-telescope/telescope-file-browser.nvim" },
-			{
-				"nvim-tree/nvim-web-devicons",
-			},
+			-- icons for different file types
+			{ "nvim-tree/nvim-web-devicons" },
 		},
 	})
 
@@ -67,6 +66,11 @@ return require("packer").startup(function(use)
 		},
 	})
 
+	use({
+		"folke/trouble.nvim",
+		requires = "nvim-tree/nvim-web-devicons",
+	})
+
 	---------- File Browser --------
 	-- use("preservim/nerdtree")
 	use("ms-jpq/chadtree")
@@ -82,9 +86,7 @@ return require("packer").startup(function(use)
 	use("tpope/vim-fugitive")
 
 	-- Brackets, quotes, etc. completion
-	use({
-		"windwp/nvim-autopairs",
-	})
+	use("windwp/nvim-autopairs")
 
 	-- undo tree
 	use("mbbill/undotree")
@@ -98,6 +100,6 @@ return require("packer").startup(function(use)
 	-- git blame
 	use("apzelos/blamer.nvim")
 
-  -- transparency
-  use("xiyaowong/transparent.nvim")
+	-- transparency
+	use("xiyaowong/transparent.nvim")
 end)

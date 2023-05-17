@@ -15,6 +15,7 @@ exec_always --no-startup-id xinput set-prop 15 310 1 &
 exec_always --no-startup-id xinput set-prop 15 283 1 &
 # exec_always --no-startup-id ~/.config/polybar/scripts/bars/fancy_dark.sh &
 exec_always --no-startup-id ~/.config/polybar/scripts/bars/minimal_dark.sh &
+exec_always --no-startup-id ~/.config/i3/scripts/set_display.sh &
 
 
 #####################
@@ -156,7 +157,7 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
-gaps inner 24
+gaps inner 8
 # smart_gaps true
 
 ###################

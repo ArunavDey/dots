@@ -38,3 +38,7 @@ vim.keymap.set("n", "<leader>gb", vim.cmd.BlamerToggle)
 
 -- Transparency toggle
 vim.keymap.set("n", "<leader>tt", vim.cmd.TransparentToggle)
+
+vim.keymap.set("n", "<leader>dd", vim.diagnostic.open_float, { noremap = true })
+vim.keymap.set("n", "<leader>d[", vim.diagnostic.goto_prev, { noremap = true })
+vim.keymap.set("n", "<leader>d]", vim.diagnostic.goto_next, { noremap = true })
