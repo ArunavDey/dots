@@ -84,6 +84,11 @@ _G.packer_plugins = {
     path = "/home/arunav/.local/share/nvim/site/pack/packer/start/blamer.nvim",
     url = "https://github.com/apzelos/blamer.nvim"
   },
+  ["bufferline.nvim"] = {
+    loaded = true,
+    path = "/home/arunav/.local/share/nvim/site/pack/packer/start/bufferline.nvim",
+    url = "https://github.com/akinsho/bufferline.nvim"
+  },
   chadtree = {
     loaded = true,
     path = "/home/arunav/.local/share/nvim/site/pack/packer/start/chadtree",
@@ -143,6 +148,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/arunav/.local/share/nvim/site/pack/packer/start/lsp-zero.nvim",
     url = "https://github.com/VonHeikemen/lsp-zero.nvim"
+  },
+  ["lualine.nvim"] = {
+    loaded = true,
+    path = "/home/arunav/.local/share/nvim/site/pack/packer/start/lualine.nvim",
+    url = "https://github.com/nvim-lualine/lualine.nvim"
   },
   ["mason-lspconfig.nvim"] = {
     loaded = true,
@@ -228,11 +238,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/arunav/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
     url = "https://github.com/folke/tokyonight.nvim"
-  },
-  ["transparent.nvim"] = {
-    loaded = true,
-    path = "/home/arunav/.local/share/nvim/site/pack/packer/start/transparent.nvim",
-    url = "https://github.com/xiyaowong/transparent.nvim"
   },
   ["trouble.nvim"] = {
     loaded = true,

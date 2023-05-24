@@ -71,6 +71,12 @@ return require("packer").startup(function(use)
 		requires = "nvim-tree/nvim-web-devicons",
 	})
 
+	---------- Lualine --------
+	use("nvim-lualine/lualine.nvim")
+
+	---------- Bufferline --------
+	use({ "akinsho/bufferline.nvim", tag = "*" })
+
 	---------- File Browser --------
 	-- use("preservim/nerdtree")
 	use("ms-jpq/chadtree")
@@ -99,7 +105,4 @@ return require("packer").startup(function(use)
 
 	-- git blame
 	use("apzelos/blamer.nvim")
-
-	-- transparency
-	use("xiyaowong/transparent.nvim")
 end)

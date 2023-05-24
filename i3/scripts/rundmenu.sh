@@ -5,6 +5,6 @@ dmenu_run -i \
   -nf "#555555" \
   -sb "#b8bb26" \
   -sf "#1d2021" \
-  -fn "JetBrainsMono Nerd Font Mono-8" \
+  -fn "JetBrainsMono Nerd Font Mono-7" \
   -p ">" \
   -b

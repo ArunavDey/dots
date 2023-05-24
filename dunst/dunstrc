@@ -6,25 +6,24 @@
     width = 160
     height = 160
 
+    offset = 0x0
+
     alignment = left
     vertical_alignment = center
 
-    offset = 8x8
-
-    corner_radius = 2
+    corner_radius = 0
     notification_limit = 0
 
     progress_bar = false
 
-    separator_height = 2
+    separator_height = 1
+    separator_color = "#1d2021"
     padding = 8
     horizontal_padding = 8
     frame_width = 1
-    frame_color = "#fe8019"
+    frame_color = "#1d2021"
 
     gap_size = 0
-
-    separator_color = frame
 
     sort = yes
 
@@ -72,11 +71,11 @@
     timeout = 5
 
 [urgency_normal]
-    background = "#d65d0e"
-    foreground = "#fbf1c7"
+    background = "#fe8019"
+    foreground = "#1d2021"
     timeout = 7
 
 [urgency_critical]
     background = "fb4934"
-    foreground = "#282828"
+    foreground = "#1d2021"
     timeout = 0

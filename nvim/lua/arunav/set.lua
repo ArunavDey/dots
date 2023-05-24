@@ -2,39 +2,31 @@
 ---------- General Settings for Neovim --------
 -----------------------------------------------
 local vim = vim
-local g = vim.g   -- let
-local o = vim.opt -- set
+local g = vim.g
+local o = vim.opt
 
 -- General
-o.showcmd = true            -- shows the command typed
-o.wildmenu = true           -- menu for command completion
-o.showmatch = true          -- briefly jump to matching bracket when inserted
-o.incsearch = true          -- highlight match while typing
-o.cursorline = true         -- highlights current line
-o.title = true              -- let vim set the title of the window
-o.background = "dark"       -- used for highlight color
-o.number = true             -- shows lines numbers
-o.clipboard = "unnamedplus" -- copy to clipboard, need xclip
+o.showcmd = true
+o.wildmenu = true
+o.showmatch = true
+o.incsearch = true
+o.cursorline = true
+o.title = true
+o.background = "dark"
+o.number = true
+o.clipboard = "unnamedplus"
 o.termguicolors = true
-o.path:append '**'
-
--- Folding
--- o.foldmethod = "indent" -- how to fold
--- o.foldexpr = "nvim_treesitter#foldexpr()"
-
--- Line Wrapping
-o.wrap = true        -- enable wrapping long lines
-o.breakindent = true -- indents wrapped line
-o.linebreak = true   -- wrap long lines at a blank
-
--- Indentation
-o.autoindent = true  -- automatically indents
-o.smartindent = true -- smart indentation
-o.tabstop = 2        -- number of spaces tab uses in a file
-o.shiftwidth = 2     -- number of spaces for autoindent
-o.softtabstop = 2    -- number of spaces that tab uses while editting
-o.expandtab = true   -- convert tabs to spaces
-o.shiftround = false -- round indents to multiples of shiftwidth
+o.path:append("**")
+o.wrap = true
+o.breakindent = true
+o.linebreak = true
+o.autoindent = true
+o.smartindent = true
+o.tabstop = 2
+o.shiftwidth = 2
+o.softtabstop = 2
+o.expandtab = true
+o.shiftround = false
 
 -- Neoformat Defaults
 g.neoformat_basic_format_align = 1
@@ -53,12 +45,3 @@ g.blamer_enabled = 0
 g.blamer_delay = 0
 g.blamer_show_in_insert_modes = 0
 g.blamer_show_in_visual_modes = 0
-
-
--- Minimap
--- g.minimap_width = 8
--- g.minimap_auto_start = 1
--- g.minimap_base_highlight = "Normal"
--- g.minimap_git_colors = 1
-
--- g.chadtree_settings.theme.icon_glyph_set = "devicons"

@@ -10,12 +10,13 @@ font pango: JetBrainsMono Nerd Font 10
 set $mod Mod4
 focus_follows_mouse no
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
-exec_always --no-startup-id feh --bg-fill ~/Downloads/flower.jpg &
+exec_always --no-startup-id feh --bg-fill ~/Pictures/Wallpapers/flower.jpg &
 exec_always --no-startup-id xinput set-prop 15 310 1 &
 exec_always --no-startup-id xinput set-prop 15 283 1 &
 # exec_always --no-startup-id ~/.config/polybar/scripts/bars/fancy_dark.sh &
 exec_always --no-startup-id ~/.config/polybar/scripts/bars/minimal_dark.sh &
 exec_always --no-startup-id ~/.config/i3/scripts/set_display.sh &
+exec_always --no-startup-id ~/.config/i3/scripts/set_xinput.sh &
 
 
 #####################
@@ -157,7 +158,7 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
-gaps inner 8
+gaps inner 24
 # smart_gaps true
 
 ###################

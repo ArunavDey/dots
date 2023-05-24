@@ -24,6 +24,12 @@ lsp.ensure_installed({"tsserver", "eslint", "pyright"})
 ---------- Autopairs setup --------
 require("nvim-autopairs").setup()
 
+---------- Lualine --------
+require("lualine").setup()
+
+---------- Bufferline --------
+require("bufferline").setup()
+
 ---------- CHADTree ----------
 local chadtree = {
     theme = {
