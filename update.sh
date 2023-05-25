@@ -20,7 +20,7 @@ cp -r ~/.config/polybar ./
 echo -e "\tzathura"
 cp -r ~/.config/zathura ./
 echo -e "\ttmux"
-cp -r ~/.config/tmux ./
+cp -r ~/.config/tmux/tmux.conf ./tmux/
 echo -e "\tpicom"
 cp -r ~/.config/picom ./
 echo -e "\tdunst"

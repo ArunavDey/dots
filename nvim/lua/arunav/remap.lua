@@ -43,6 +43,6 @@ vim.keymap.set("n", "<leader>d[", vim.diagnostic.goto_prev, { noremap = true })
 vim.keymap.set("n", "<leader>d]", vim.diagnostic.goto_next, { noremap = true })
 
 -- buffer
-vim.keymap.set("n", "<leader>b[", vim.cmd.bnext)
-vim.keymap.set("n", "<leader>b]", vim.cmd.bprev)
+vim.keymap.set("n", "<leader>[", vim.cmd.bprev)
+vim.keymap.set("n", "<leader>]", vim.cmd.bnext)
 vim.keymap.set("n", "<leader>bd", vim.cmd.bdelete)

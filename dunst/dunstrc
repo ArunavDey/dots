@@ -3,10 +3,10 @@
     indicate_hidden = yes
     shrink = true
 
-    width = 160
-    height = 160
+    width = 120
+    height = 120
 
-    offset = 0x0
+    offset = 12x12
 
     alignment = left
     vertical_alignment = center
@@ -16,12 +16,12 @@
 
     progress_bar = false
 
-    separator_height = 1
-    separator_color = "#1d2021"
+    separator_height = 4
+    separator_color = "#00000000"
     padding = 8
     horizontal_padding = 8
     frame_width = 1
-    frame_color = "#1d2021"
+    frame_color = "#00000000"
 
     gap_size = 0
 
