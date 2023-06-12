@@ -15,7 +15,6 @@ fi
 ##### Desktop Environment Setup #####
 #####################################
 picom & # display compositor
-dunst & # notification daemon
 xss-lock --transfer-sleep-lock -- ~/.config/i3/scripts/runi3lock.sh --nofork & # enable using external lock as X screen saver
 nm-applet & # network manager
 blueman-applet & # bluetooth manager

@@ -8,9 +8,11 @@
 ############################
 font pango: JetBrainsMono Nerd Font 10
 set $mod Mod4
-focus_follows_mouse no
+focus_follows_mouse yes
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
-exec_always --no-startup-id feh --bg-fill ~/Pictures/Wallpapers/splash.jpg &
+exec_always --no-startup-id dunst &
+exec_always --no-startup-id setxkbmap -option ctrl:swapcaps &
+exec_always --no-startup-id feh --bg-fill ~/pictures/wallpapers/flower.jpg &
 exec_always --no-startup-id xinput set-prop 15 310 1 &
 exec_always --no-startup-id xinput set-prop 15 283 1 &
 # exec_always --no-startup-id ~/.config/polybar/scripts/bars/fancy_dark.sh &
@@ -29,12 +31,13 @@ bindsym $mod+Shift+p exec polybar-msg cmd toggle
 bindsym $mod+b exec brave
 bindsym $mod+Shift+b exec brave --incognito
 bindsym $mod+f exec thunar
-bindsym $mod+c exec code
+bindsym $mod+c exec calculator
 bindsym $mod+space exec ~/.config/i3/scripts/rundmenu.sh
 bindsym $mod+Tab exec ~/.config/i3/scripts/runrofi.sh
 bindsym $mod+Print exec ~/.config/i3/scripts/screenshot.sh
 bindsym $mod+Shift+Print exec ~/.config/i3/scripts/windowshot.sh
 bindsym $mod+Shift+x exec ~/.config/i3/scripts/runi3lock.sh
+bindsym $mod+p exec ~/.config/polybar/scripts/power-profile-toggle.sh
 
 
 ###########################
@@ -160,6 +163,7 @@ bindsym $mod+r mode "resize"
 
 gaps inner 16
 # smart_gaps true
+
 
 ###################
 ##### COLOURS #####

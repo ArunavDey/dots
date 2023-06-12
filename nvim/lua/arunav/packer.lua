@@ -105,4 +105,7 @@ return require("packer").startup(function(use)
 
 	-- git blame
 	use("apzelos/blamer.nvim")
+
+  -- discord presence
+  use("andweeb/presence.nvim")
 end)

@@ -25,10 +25,10 @@ lsp.ensure_installed({"tsserver", "eslint", "pyright"})
 require("nvim-autopairs").setup()
 
 ---------- Lualine --------
--- require("lualine").setup()
+require("lualine").setup()
 
 ---------- Bufferline --------
--- require("bufferline").setup()
+require("bufferline").setup()
 
 ---------- CHADTree ----------
 local chadtree = {
@@ -39,3 +39,11 @@ local chadtree = {
 }
 
 vim.api.nvim_set_var("chadtree_settings", chadtree)
+
+
+---------- Discord Presence ----------
+require("presence").setup({
+  auto_update = true,
+  main_image = "file",
+  show_time = false,
+})
