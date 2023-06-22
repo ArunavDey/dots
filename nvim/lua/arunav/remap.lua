@@ -48,3 +48,4 @@ vim.keymap.set("n", "<leader>tt", vim.cmd.TroubleToggle)
 vim.keymap.set("n", "<leader>[", vim.cmd.bprev)
 vim.keymap.set("n", "<leader>]", vim.cmd.bnext)
 vim.keymap.set("n", "<leader>bd", vim.cmd.bdelete)
+
