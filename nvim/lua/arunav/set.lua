@@ -27,6 +27,7 @@ o.shiftwidth = 2
 o.softtabstop = 2
 o.expandtab = true
 o.shiftround = false
+o.updatetime = 100
 
 -- Neoformat Defaults
 g.neoformat_basic_format_align = 1
@@ -40,8 +41,8 @@ g.rainbow_active = 1
 g.python3_host_prog = "python"
 g.loaded_perl_provider = 0
 g.loaded_ruby_provider = 0
-g.NERDTreeShowLineNumbers = 1
-g.blamer_enabled = 0
+g.blamer_enabled = 1
 g.blamer_delay = 0
 g.blamer_show_in_insert_modes = 0
 g.blamer_show_in_visual_modes = 0
+g.gitgutter_terminal_reports_focus = 0

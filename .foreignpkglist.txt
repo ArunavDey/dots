@@ -9,6 +9,6 @@ plymouth-git 22.02.122.r180.gb1d5aa9d-1
 python-conda 23.1.0-1
 spotify 1:1.2.13.661-1
 unimatrix-git r69.4cc40bb-1
-unityhub 3.4.2-1
+unityhub 3.5.0-1
 visual-studio-code-bin 1.79.2-1
 yay 12.0.5-1

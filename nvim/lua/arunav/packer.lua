@@ -103,9 +103,18 @@ return require("packer").startup(function(use)
 	-- colour coded parentheses
 	use("luochen1990/rainbow")
 
-	-- git blame
+	-- git
 	use("apzelos/blamer.nvim")
+	use("airblade/vim-gitgutter")
 
-  -- discord presence
-  use("andweeb/presence.nvim")
+	-- discord presence
+	use("andweeb/presence.nvim")
+
+	-- markdown preview
+	use({
+		"iamcco/markdown-preview.nvim",
+		run = function()
+			vim.fn["mkdp#util#install"]()
+		end,
+	})
 end)
