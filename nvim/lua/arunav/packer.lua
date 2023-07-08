@@ -9,14 +9,7 @@ return require("packer").startup(function(use)
 	use("wbthomason/packer.nvim")
 
 	---------- Colorschemes --------
-	-- * with treesitter support
 	use("morhetz/gruvbox")
-	use("luisiacc/gruvbox-baby")
-	use("sainnhe/gruvbox-material")
-	use("rebelot/kanagawa.nvim")
-	use("sainnhe/sonokai")
-	use("folke/tokyonight.nvim")
-	use("glepnir/zephyr-nvim")
 
 	---------- Fuzzy Finder --------
 	-- Telescope
@@ -66,16 +59,9 @@ return require("packer").startup(function(use)
 		},
 	})
 
-	use({
-		"folke/trouble.nvim",
-		requires = "nvim-tree/nvim-web-devicons",
-	})
 
 	---------- Lualine --------
 	use("nvim-lualine/lualine.nvim")
-
-	---------- Bufferline --------
-	use({ "akinsho/bufferline.nvim", tag = "*" })
 
 	---------- File Browser --------
 	-- use("preservim/nerdtree")
@@ -90,9 +76,17 @@ return require("packer").startup(function(use)
 
 	-- git wrapper
 	use("tpope/vim-fugitive")
+	use("apzelos/blamer.nvim")
+	use("airblade/vim-gitgutter")
 
 	-- Brackets, quotes, etc. completion
 	use("windwp/nvim-autopairs")
+
+  -- errors and warnings
+	use({
+		"folke/trouble.nvim",
+		requires = "nvim-tree/nvim-web-devicons",
+	})
 
 	-- undo tree
 	use("mbbill/undotree")
@@ -103,18 +97,6 @@ return require("packer").startup(function(use)
 	-- colour coded parentheses
 	use("luochen1990/rainbow")
 
-	-- git
-	use("apzelos/blamer.nvim")
-	use("airblade/vim-gitgutter")
-
 	-- discord presence
 	use("andweeb/presence.nvim")
-
-	-- markdown preview
-	use({
-		"iamcco/markdown-preview.nvim",
-		run = function()
-			vim.fn["mkdp#util#install"]()
-		end,
-	})
 end)

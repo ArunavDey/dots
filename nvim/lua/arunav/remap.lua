@@ -3,22 +3,8 @@
 --------------------------------------
 local vim = vim
 
-vim.keymap.set("i", "<C-[>", "<Esc>")
-vim.keymap.set("v", "<C-[>", "<Esc>")
-
--- disable highlights
-vim.keymap.set("n", "<leader>nh", vim.cmd.noh)
-
 -- chadtree
-vim.keymap.set("n", "<leader>nn", vim.cmd.CHADopen)
 vim.keymap.set("n", "<leader>e", vim.cmd.CHADopen)
-
--- format document
-vim.keymap.set("n", "<leader>nf", vim.cmd.Neoformat)
-
--- split
-vim.keymap.set("n", "<leader>sh", vim.cmd.vsplit)
-vim.keymap.set("n", "<leader>sv", vim.cmd.split)
 
 -- telescope
 local telescope_builtin = require("telescope.builtin")
@@ -32,20 +18,8 @@ vim.keymap.set(
 	{ noremap = true }
 )
 
--- git
-vim.keymap.set("n", "<leader>gs", vim.cmd.Git)
-
--- undotree
-vim.keymap.set("n", "<leader>uu", vim.cmd.UndotreeToggle)
-
 -- git blame
-vim.keymap.set("n", "<leader>gb", vim.cmd.BlamerToggle)
+vim.keymap.set("n", "<leader>bb", vim.cmd.BlamerToggle)
 
 -- diagnostics
 vim.keymap.set("n", "<leader>tt", vim.cmd.TroubleToggle)
-
--- buffer
-vim.keymap.set("n", "<leader>[", vim.cmd.bprev)
-vim.keymap.set("n", "<leader>]", vim.cmd.bnext)
-vim.keymap.set("n", "<leader>bd", vim.cmd.bdelete)
-

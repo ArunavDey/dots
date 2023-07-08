@@ -14,6 +14,7 @@ o.cursorline = true
 o.title = true
 o.background = "dark"
 o.number = true
+o.relativenumber = true
 o.clipboard = "unnamedplus"
 o.termguicolors = true
 o.path:append("**")

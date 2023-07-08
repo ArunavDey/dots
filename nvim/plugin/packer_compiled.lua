@@ -84,11 +84,6 @@ _G.packer_plugins = {
     path = "/home/arunav/.local/share/nvim/site/pack/packer/start/blamer.nvim",
     url = "https://github.com/apzelos/blamer.nvim"
   },
-  ["bufferline.nvim"] = {
-    loaded = true,
-    path = "/home/arunav/.local/share/nvim/site/pack/packer/start/bufferline.nvim",
-    url = "https://github.com/akinsho/bufferline.nvim"
-  },
   chadtree = {
     loaded = true,
     path = "/home/arunav/.local/share/nvim/site/pack/packer/start/chadtree",
@@ -129,21 +124,6 @@ _G.packer_plugins = {
     path = "/home/arunav/.local/share/nvim/site/pack/packer/start/gruvbox",
     url = "https://github.com/morhetz/gruvbox"
   },
-  ["gruvbox-baby"] = {
-    loaded = true,
-    path = "/home/arunav/.local/share/nvim/site/pack/packer/start/gruvbox-baby",
-    url = "https://github.com/luisiacc/gruvbox-baby"
-  },
-  ["gruvbox-material"] = {
-    loaded = true,
-    path = "/home/arunav/.local/share/nvim/site/pack/packer/start/gruvbox-material",
-    url = "https://github.com/sainnhe/gruvbox-material"
-  },
-  ["kanagawa.nvim"] = {
-    loaded = true,
-    path = "/home/arunav/.local/share/nvim/site/pack/packer/start/kanagawa.nvim",
-    url = "https://github.com/rebelot/kanagawa.nvim"
-  },
   ["lsp-zero.nvim"] = {
     loaded = true,
     path = "/home/arunav/.local/share/nvim/site/pack/packer/start/lsp-zero.nvim",
@@ -153,11 +133,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/arunav/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
-  },
-  ["markdown-preview.nvim"] = {
-    loaded = true,
-    path = "/home/arunav/.local/share/nvim/site/pack/packer/start/markdown-preview.nvim",
-    url = "https://github.com/iamcco/markdown-preview.nvim"
   },
   ["mason-lspconfig.nvim"] = {
     loaded = true,
@@ -224,11 +199,6 @@ _G.packer_plugins = {
     path = "/home/arunav/.local/share/nvim/site/pack/packer/start/ripgrep",
     url = "https://github.com/BurntSushi/ripgrep"
   },
-  sonokai = {
-    loaded = true,
-    path = "/home/arunav/.local/share/nvim/site/pack/packer/start/sonokai",
-    url = "https://github.com/sainnhe/sonokai"
-  },
   ["telescope-file-browser.nvim"] = {
     loaded = true,
     path = "/home/arunav/.local/share/nvim/site/pack/packer/start/telescope-file-browser.nvim",
@@ -243,11 +213,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/arunav/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
-  },
-  ["tokyonight.nvim"] = {
-    loaded = true,
-    path = "/home/arunav/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
-    url = "https://github.com/folke/tokyonight.nvim"
   },
   ["trouble.nvim"] = {
     loaded = true,
@@ -278,11 +243,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/arunav/.local/share/nvim/site/pack/packer/start/vim-surround",
     url = "https://github.com/tpope/vim-surround"
-  },
-  ["zephyr-nvim"] = {
-    loaded = true,
-    path = "/home/arunav/.local/share/nvim/site/pack/packer/start/zephyr-nvim",
-    url = "https://github.com/glepnir/zephyr-nvim"
   }
 }
 

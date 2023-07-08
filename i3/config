@@ -8,11 +8,11 @@
 ############################
 font pango: JetBrainsMono Nerd Font 10
 set $mod Mod4
-focus_follows_mouse yes
+focus_follows_mouse no
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 exec_always --no-startup-id dunst &
 exec_always --no-startup-id setxkbmap -option ctrl:swapcaps &
-exec_always --no-startup-id feh --bg-fill ~/pictures/wallpapers/flower.jpg &
+exec_always --no-startup-id feh --bg-fill ~/pictures/wallpapers/malenia.jpg &
 exec_always --no-startup-id xinput set-prop 15 310 1 &
 exec_always --no-startup-id xinput set-prop 15 283 1 &
 # exec_always --no-startup-id ~/.config/polybar/scripts/bars/fancy_dark.sh &
@@ -161,7 +161,7 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
-gaps inner 8
+gaps inner 0
 # smart_gaps true
 
 
@@ -184,4 +184,4 @@ client.unfocused        $inactive-bg-color  $inactive-bg-color  $inactive-text-c
 client.focused_inactive $inactive-bg-color  $inactive-bg-color  $inactive-text-color  #282828
 client.urgent           $urgent-bg-color    $urgent-bg-color    $text-color           #ff8888
 
-for_window [class="^.*"] border pixel 2
+for_window [class="^.*"] border pixel 1

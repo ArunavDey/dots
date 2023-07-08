@@ -39,9 +39,6 @@ require("nvim-autopairs").setup()
 ---------- Lualine --------
 require("lualine").setup()
 
----------- Bufferline --------
-require("bufferline").setup()
-
 ---------- CHADTree ----------
 local chadtree = {
 	theme = {
