@@ -161,7 +161,7 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
-gaps inner 0
+gaps inner 8
 # smart_gaps true
 
 

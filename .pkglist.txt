@@ -32,7 +32,6 @@ fd 8.7.0-1
 feh 3.10-1
 figlet 2.2.5-4
 file-roller 43.0-2
-firefox 115.0.1-1
 font-manager 0.8.8-1
 fox 1:1.6.57-3
 fzf 0.42.0-1
@@ -86,6 +85,7 @@ network-manager-applet 1.32.0-3
 networkmanager 1.42.6-1
 noise-suppression-for-voice 1.03-1
 noto-fonts-emoji 20220920-1
+npm 9.8.0-1
 nvidia 535.54.03-7
 nvtop 3.0.1-1
 nyancat 1.5.2-2
@@ -158,10 +158,11 @@ typescript 5.1.6-1
 ufw 0.36.2-2
 unzip 6.0-19
 vifm 0.13-1
-vim 9.0.1628-1
+vim 9.0.1676-1
 virtualbox 7.0.8-2
 virtualbox-host-modules-arch 7.0.8-22
 vlc 3.0.18-12
+vnstat 2.10-1
 w3m 0.5.3.git20230121_1-1
 wget 1.21.4-1
 wireless_tools 30.pre9-3

@@ -1,10 +1,10 @@
 #!/bin/sh
 
 dmenu_run -i \
-  -sb "#b8bb26" \
-  -sf "#282828" \
-  -nb "#b8bb26" \
-  -nf "#555555" \
-  -fn "JetBrainsMono Nerd Font Mono-7:style=Bold" \
-  -p ">" \
+  -sf "#e9e0bb" \
+  -sb "#282828" \
+  -nf "#777777" \
+  -nb "#282828" \
+  -fn "JetBrainsMono Nerd Font Mono:style=Regular:pixelsize=14" \
+  -p "search" \
   -b
