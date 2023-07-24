@@ -10,6 +10,7 @@ return require("packer").startup(function(use)
 
 	---------- Colorschemes --------
 	use("morhetz/gruvbox")
+	use("rose-pine/neovim")
 
 	---------- Fuzzy Finder --------
 	-- Telescope
@@ -32,7 +33,7 @@ return require("packer").startup(function(use)
 
 	---------- Code Parsing --------
 	-- better syntax highlighting
-	use("nvim-treesitter/nvim-treesitter", { run = ":TSUpdate" })
+	use("nvim-treesitter/nvim-treesitter")
 
 	-- LSP, autocompletion and snippets
 	use({
@@ -59,12 +60,7 @@ return require("packer").startup(function(use)
 		},
 	})
 
-
-	---------- Lualine --------
-	use("nvim-lualine/lualine.nvim")
-
 	---------- File Browser --------
-	-- use("preservim/nerdtree")
 	use("ms-jpq/chadtree")
 
 	---------- Miscellaneous --------
@@ -82,7 +78,7 @@ return require("packer").startup(function(use)
 	-- Brackets, quotes, etc. completion
 	use("windwp/nvim-autopairs")
 
-  -- errors and warnings
+	-- errors and warnings
 	use({
 		"folke/trouble.nvim",
 		requires = "nvim-tree/nvim-web-devicons",
@@ -96,7 +92,4 @@ return require("packer").startup(function(use)
 
 	-- colour coded parentheses
 	use("luochen1990/rainbow")
-
-	-- discord presence
-	use("andweeb/presence.nvim")
 end)

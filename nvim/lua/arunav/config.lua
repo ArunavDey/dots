@@ -6,7 +6,6 @@ local vim = vim
 ---------- Treesitter setup --------
 require("nvim-treesitter.configs").setup({
 	ensure_installed = {
-		"help",
 		"c",
 		"css",
 		"html",
@@ -36,9 +35,6 @@ lsp.ensure_installed({ "tsserver", "eslint", "pyright" })
 ---------- Autopairs setup --------
 require("nvim-autopairs").setup()
 
----------- Lualine --------
-require("lualine").setup()
-
 ---------- CHADTree ----------
 local chadtree = {
 	theme = {
@@ -48,10 +44,3 @@ local chadtree = {
 }
 
 vim.api.nvim_set_var("chadtree_settings", chadtree)
-
----------- Discord Presence ----------
-require("presence").setup({
-	auto_update = true,
-	main_image = "file",
-	show_time = false,
-})
