@@ -44,3 +44,12 @@ local chadtree = {
 }
 
 vim.api.nvim_set_var("chadtree_settings", chadtree)
+
+---------- Lualine ----------
+require("lualine").setup({
+	options = {
+		icons_enabled = false,
+		section_separators = "",
+		component_separators = "",
+	},
+})

@@ -63,6 +63,9 @@ return require("packer").startup(function(use)
 	---------- File Browser --------
 	use("ms-jpq/chadtree")
 
+	---------- Status Line ----------
+	use("nvim-lualine/lualine.nvim")
+
 	---------- Miscellaneous --------
 	-- comments support
 	use("tpope/vim-commentary")
