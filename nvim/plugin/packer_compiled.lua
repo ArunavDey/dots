@@ -79,11 +79,6 @@ _G.packer_plugins = {
     path = "/home/arunav/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
-  ["blamer.nvim"] = {
-    loaded = true,
-    path = "/home/arunav/.local/share/nvim/site/pack/packer/start/blamer.nvim",
-    url = "https://github.com/apzelos/blamer.nvim"
-  },
   chadtree = {
     loaded = true,
     path = "/home/arunav/.local/share/nvim/site/pack/packer/start/chadtree",
@@ -128,11 +123,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/arunav/.local/share/nvim/site/pack/packer/start/lsp-zero.nvim",
     url = "https://github.com/VonHeikemen/lsp-zero.nvim"
-  },
-  ["lualine.nvim"] = {
-    loaded = true,
-    path = "/home/arunav/.local/share/nvim/site/pack/packer/start/lualine.nvim",
-    url = "https://github.com/nvim-lualine/lualine.nvim"
   },
   ["mason-lspconfig.nvim"] = {
     loaded = true,
