@@ -12,7 +12,6 @@ vim.cmd.colorscheme("rose-pine")
 vim.diagnostic.open_float()
 treesitter.setup({
 	sync_install = true,
-	auto_install = true,
 	highlight = {
 		enable = true,
 	},
@@ -22,6 +21,5 @@ lsp.preset("recommended")
 lsp.setup()
 
 autopairs.setup()
-
 
 vim.api.nvim_set_var("chadtree_settings", chadtree_settings)

@@ -10,7 +10,6 @@ o.cursorline = true
 o.title = true
 o.background = "dark"
 o.number = true
-o.relativenumber = true
 o.clipboard = "unnamedplus"
 o.termguicolors = true
 o.path:append("**")
@@ -25,6 +24,7 @@ o.softtabstop = 2
 o.expandtab = true
 o.shiftround = false
 o.updatetime = 100
+g.mapleader = ' ';
 g.neoformat_basic_format_align = 1
 g.neoformat_basic_format_retab = 1
 g.neoformat_basic_format_trim = 1

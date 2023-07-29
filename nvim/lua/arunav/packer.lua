@@ -24,7 +24,6 @@ return packer.startup(function(use)
 			{ "nvim-lua/plenary.nvim" },
 			{ "BurntSushi/ripgrep" },
 			{ "nvim-telescope/telescope-fzf-native.nvim", run = "make" },
-			{ "nvim-telescope/telescope-file-browser.nvim" },
 		},
 	})
 	use({
