@@ -8,9 +8,6 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  unset f
 fi
 
-# disables battery conservation mode and allows the battery to charge to 100%
-# echo 0 | sudo tee /sys/bus/platform/drivers/ideapad_acpi/VPC2004:00/conservation_mode
-
 #####################################
 ##### Desktop Environment Setup #####
 #####################################

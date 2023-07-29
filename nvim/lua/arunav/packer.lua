@@ -1,9 +1,10 @@
 local vim = vim
+local packer = require("packer");
+
 vim.cmd([[packadd packer.nvim]])
 
-return require("packer").startup(function(use)
+return packer.startup(function(use)
 	use("wbthomason/packer.nvim")
-	use("morhetz/gruvbox")
 	use("rose-pine/neovim")
 	use("nvim-treesitter/nvim-treesitter")
 	use("tpope/vim-commentary")

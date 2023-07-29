@@ -1,9 +1,15 @@
 local vim = vim
+local treesitter = require("nvim-treesitter.configs")
+local lsp = require("lsp-zero")
+local autopairs = require("nvim-autopairs")
+local chadtree_settings = {
+	theme = {
+		icon_colour_set = "none",
+	},
+}
 
 vim.cmd.colorscheme("rose-pine")
 vim.diagnostic.open_float()
-
-local treesitter = require("nvim-treesitter.configs")
 treesitter.setup({
 	sync_install = true,
 	auto_install = true,
@@ -12,18 +18,10 @@ treesitter.setup({
 	},
 })
 
-local lsp = require("lsp-zero")
 lsp.preset("recommended")
 lsp.setup()
-lsp.ensure_installed({ "tsserver", "eslint", "pyright" })
 
-local autopairs = require("nvim-autopairs")
 autopairs.setup()
 
-local chadtree_settings = {
-	theme = {
-		icon_colour_set = "none",
-	},
-}
 
 vim.api.nvim_set_var("chadtree_settings", chadtree_settings)
