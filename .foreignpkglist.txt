@@ -10,5 +10,4 @@ python-conda 23.1.0-1
 spotify 1:1.2.13.661-1
 unimatrix-git r69.4cc40bb-1
 unityhub 3.5.0-1
-visual-studio-code-bin 1.80.1-1
 yay 12.1.0-1

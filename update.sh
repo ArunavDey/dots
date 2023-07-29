@@ -31,7 +31,7 @@ sudo mkdir /mnt/hdd/dots; cp -r ./* /mnt/hdd/dots/
 
 echo "Pushing changes to https://github.com/ArunavDey/dots"
 git add -A
-git commit -m "update dots"
+git commit
 git push
 
 echo "Done!"
