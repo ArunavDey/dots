@@ -114,6 +114,11 @@ _G.packer_plugins = {
     path = "/home/arunav/.local/share/nvim/site/pack/packer/start/friendly-snippets",
     url = "https://github.com/rafamadriz/friendly-snippets"
   },
+  gruvbox = {
+    loaded = true,
+    path = "/home/arunav/.local/share/nvim/site/pack/packer/start/gruvbox",
+    url = "https://github.com/morhetz/gruvbox"
+  },
   ["lsp-zero.nvim"] = {
     loaded = true,
     path = "/home/arunav/.local/share/nvim/site/pack/packer/start/lsp-zero.nvim",

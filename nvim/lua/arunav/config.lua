@@ -8,7 +8,6 @@ local chadtree_settings = {
 	},
 }
 
-vim.cmd.colorscheme("rose-pine")
 vim.diagnostic.open_float()
 treesitter.setup({
 	sync_install = true,
@@ -23,3 +22,6 @@ lsp.setup()
 autopairs.setup()
 
 vim.api.nvim_set_var("chadtree_settings", chadtree_settings)
+vim.cmd.colorscheme("rose-pine")
+vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })

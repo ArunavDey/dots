@@ -1,7 +1,7 @@
-brave-bin 1:1.56.11-1
+brave-bin 1:1.56.14-1
 cava 0.8.3-1
 gotop 4.2.0-1
-i3lock-color 2.13.c.4-1
+i3lock-color 2.13.c.5-1
 mongodb-bin 6.0.8-1
 pfetch 0.6.0-3
 picom-ibhagwan-git 1578_Next.297.gc4107bb_2021.11.03-1
@@ -10,4 +10,4 @@ python-conda 23.1.0-1
 spotify 1:1.2.13.661-1
 unimatrix-git r69.4cc40bb-1
 unityhub 3.5.0-1
-yay 12.1.0-1
+yay 12.1.2-1

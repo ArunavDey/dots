@@ -15,7 +15,6 @@ exec_always --no-startup-id setxkbmap -option ctrl:swapcaps &
 exec_always --no-startup-id feh --bg-fill ~/pictures/wallpapers/dark-mountains.jpg &
 exec_always --no-startup-id xinput set-prop 15 310 1 &
 exec_always --no-startup-id xinput set-prop 15 283 1 &
-# exec_always --no-startup-id ~/.config/polybar/scripts/bars/fancy_dark.sh &
 exec_always --no-startup-id ~/.config/polybar/scripts/bars/minimal_dark.sh &
 exec_always --no-startup-id ~/.config/i3/scripts/set_display.sh &
 exec_always --no-startup-id ~/.config/i3/scripts/set_xinput.sh &
@@ -24,7 +23,7 @@ exec_always --no-startup-id ~/.config/i3/scripts/set_xinput.sh &
 #####################
 ###### KEYBINDS #####
 #####################
-# bindsym $mod+Shift+c reload
+bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 bindsym $mod+Return exec kitty
 bindsym $mod+Shift+p exec polybar-msg cmd toggle
@@ -161,7 +160,8 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
-gaps inner 16
+gaps inner 0
+gaps outer 0
 
 
 ###################
