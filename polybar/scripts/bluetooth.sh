@@ -1,10 +1,10 @@
 #!/bin/sh
 
 if [ $(bluetoothctl show | grep "Powered: yes" | wc -c) -eq 0 ]; then
-  echo "%{F#555}bt"
+  echo "%{F#6e6a86}bt"
 else
   if [ $(echo info | bluetoothctl | grep 'Device' | wc -l) -lt 2 ]; then
-    echo "%{F#a89984}bt"
+    echo "%{F#e0def4}bt"
   fi
-  echo "%{F#b8bb26}bt"
+  echo "%{F#ebbcba}bt"
 fi
