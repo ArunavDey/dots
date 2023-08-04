@@ -29,9 +29,4 @@ cp -r ~/.config/dunst ./
 echo "Backing up configs to /mnt/hdd/dots"
 sudo mkdir /mnt/hdd/dots; cp -r ./* /mnt/hdd/dots/
 
-echo "Pushing changes to https://github.com/ArunavDey/dots"
-git add -A
-git commit
-git push
-
 echo "Done!"
