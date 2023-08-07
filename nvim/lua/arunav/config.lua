@@ -2,6 +2,7 @@ local vim = vim
 local treesitter = require("nvim-treesitter.configs")
 local lsp = require("lsp-zero")
 local autopairs = require("nvim-autopairs")
+local lualine = require("lualine")
 local chadtree_settings = {
 	theme = {
 		icon_colour_set = "none",
@@ -21,7 +22,13 @@ lsp.setup()
 
 autopairs.setup()
 
+lualine.setup({
+	options = {
+		icons_enabled = false,
+    globalstatus = true,
+	},
+})
+
 vim.api.nvim_set_var("chadtree_settings", chadtree_settings)
 vim.cmd.colorscheme("rose-pine")
-vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+
