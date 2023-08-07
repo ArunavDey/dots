@@ -1,4 +1,4 @@
-brave-bin 1:1.56.14-1
+brave-bin 1:1.56.20-1
 cava 0.8.3-1
 gotop 4.2.0-1
 i3lock-color 2.13.c.5-1
