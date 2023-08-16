@@ -2,13 +2,13 @@
 
 ## Author: Arunav Dey
 
-## Date: 11 April 2023
+## Date: August 2023
 
 These are the dotfiles for most of my frequent applications.
 
 In this repo:
 
-- alacritty
+- kitty
 - dunst
 - i3wm
 - neovim
