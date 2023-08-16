@@ -24,6 +24,7 @@ o.softtabstop = 2
 o.expandtab = true
 o.shiftround = false
 o.updatetime = 100
+o.laststatus = 3
 g.mapleader = ' ';
 g.neoformat_basic_format_align = 1
 g.neoformat_basic_format_retab = 1
