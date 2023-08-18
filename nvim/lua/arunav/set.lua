@@ -4,7 +4,6 @@ local o = vim.opt
 
 o.showcmd = true
 o.wildmenu = true
-o.showmatch = true
 o.incsearch = true
 o.cursorline = true
 o.title = true
