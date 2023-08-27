@@ -3,11 +3,9 @@ local g = vim.g
 local o = vim.opt
 local wo = vim.wo
 
-o.showcmd = true
 o.wildmenu = true
 o.incsearch = true
 o.cursorline = true
-o.title = true
 o.background = "dark"
 o.number = true
 o.clipboard = "unnamedplus"
@@ -33,5 +31,4 @@ g.rainbow_active = 1
 g.python3_host_prog = "python"
 g.loaded_perl_provider = 0
 g.loaded_ruby_provider = 0
-g.gitgutter_terminal_reports_focus = 0
 wo.signcolumn = "yes"

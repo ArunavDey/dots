@@ -26,3 +26,4 @@ vgit.setup()
 
 vim.api.nvim_set_var("chadtree_settings", chadtree_settings)
 vim.cmd.colorscheme("rose-pine")
+vim.diagnostic.open_float()
