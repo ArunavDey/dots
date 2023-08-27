@@ -19,6 +19,7 @@ return packer.startup(function(use)
 	use("ms-jpq/chadtree")
 	use("nvim-tree/nvim-web-devicons")
 	use("folke/trouble.nvim")
+	use("tanvirtin/vgit.nvim")
 	use({
 		"nvim-telescope/telescope.nvim",
 		requires = {

@@ -1,6 +1,7 @@
 local vim = vim
 local g = vim.g
 local o = vim.opt
+local wo = vim.wo
 
 o.showcmd = true
 o.wildmenu = true
@@ -33,3 +34,4 @@ g.python3_host_prog = "python"
 g.loaded_perl_provider = 0
 g.loaded_ruby_provider = 0
 g.gitgutter_terminal_reports_focus = 0
+wo.signcolumn = "yes"

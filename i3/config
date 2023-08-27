@@ -138,7 +138,8 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 mode "exit"{
   bindsym l exec i3-msg exit
   bindsym r exec systemctl reboot
-  bindsym s exec shutdown now
+  bindsym s exec systemctl poweroff
+  bindsym h exec systemctl hibernate
   bindsym Escape mode "default"
   bindsym Return mode "default"
   bindsym $mod+Shift+e mode "default"

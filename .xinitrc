@@ -11,15 +11,13 @@ fi
 #####################################
 ##### Desktop Environment Setup #####
 #####################################
-xss-lock --transfer-sleep-lock -- ~/.config/i3/scripts/runi3lock.sh --nofork & # enable using external lock as X screen saver
+xss-lock alock & # enable using external lock as X screen saver
 nm-applet & # network manager
 blueman-applet & # bluetooth manager
 xset s off & # disable screen saver
-xset -dpms & # disable display power management signaling
+# xset -dpms & # disable display power management signaling
 xset b off & # disable bell 
 redshift -l 12.9634:77.5855 -t 5000K:4000K -P -m randr & # screen temperature
 gnome-keyring-daemon --start & # passwords
-# xinput set-prop 14 310 1 & # device settings
-# xinput set-prop 14 283 1 & # device settings
 
 exec i3

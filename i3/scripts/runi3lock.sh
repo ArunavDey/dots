@@ -1,33 +1,9 @@
 #!/bin/sh
 
-i3lock -e -f -k \
-  --indicator \
-  --radius 160 \
-  --color=1d2021 \
-  --inside-color=1d202100 \
-  --ring-color=e9e0bb00 \
-  --layout-color=ffffff \
-  --time-color=fbf1c7 \
-  --date-color=fbf1c7 \
-  --greeter-color=ffffff \
-  --insidever-color=11111100 \
-  --ringver-color=ddddff00 \
-  --insidewrong-color=11111100 \
-  --ringwrong-color=ff888800 \
-  --line-uses-inside \
-  --keyhl-color=fe8019 \
-  --separator-color=fe801900 \
-  --verif-color=fbf1c7 \
-  --wrong-color=fbf1c7 \
-  --modif-color=fbf1c7 \
+i3lock -e -f \
+  --color=000000 \
   --verif-text="Authorising" \
   --wrong-text="Try Again" \
   --noinput-text="Cleared" \
   --lock-text="Locking" \
   --lockfailed-text="Lock Failed" \
-  --time-size=32 \
-  --date-size=16 \
-  --layout-size=16 \
-  --verif-size=16 \
-  --wrong-size=17 \
-  --composite
