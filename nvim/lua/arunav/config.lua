@@ -25,5 +25,5 @@ autopairs.setup()
 vgit.setup()
 
 vim.api.nvim_set_var("chadtree_settings", chadtree_settings)
-vim.cmd.colorscheme("rose-pine")
+vim.cmd.colorscheme("catppuccin-macchiato")
 vim.diagnostic.open_float()

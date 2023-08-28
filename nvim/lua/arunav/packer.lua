@@ -1,11 +1,12 @@
 local vim = vim
-local packer = require("packer");
+local packer = require("packer")
 
 vim.cmd([[packadd packer.nvim]])
 
 return packer.startup(function(use)
 	use("wbthomason/packer.nvim")
 	use("rose-pine/neovim")
+  use({ "catppuccin/nvim", as = "catppuccin" })
 	use("nvim-treesitter/nvim-treesitter")
 	use("tpope/vim-commentary")
 	use("tpope/vim-surround")

@@ -1,3 +1,4 @@
+1password 8.10.13-5
 adwaita-qt5 1.4.2-1
 alock 2.5.1-1
 brave-bin 1:1.57.47-1

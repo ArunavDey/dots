@@ -79,6 +79,11 @@ _G.packer_plugins = {
     path = "/home/arunav/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
+  catppuccin = {
+    loaded = true,
+    path = "/home/arunav/.local/share/nvim/site/pack/packer/start/catppuccin",
+    url = "https://github.com/catppuccin/nvim"
+  },
   chadtree = {
     loaded = true,
     path = "/home/arunav/.local/share/nvim/site/pack/packer/start/chadtree",
@@ -113,11 +118,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/arunav/.local/share/nvim/site/pack/packer/start/friendly-snippets",
     url = "https://github.com/rafamadriz/friendly-snippets"
-  },
-  gruvbox = {
-    loaded = true,
-    path = "/home/arunav/.local/share/nvim/site/pack/packer/start/gruvbox",
-    url = "https://github.com/morhetz/gruvbox"
   },
   ["lsp-zero.nvim"] = {
     loaded = true,
