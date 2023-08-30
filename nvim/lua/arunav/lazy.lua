@@ -29,15 +29,15 @@ require("lazy").setup({
 	"tanvirtin/vgit.nvim",
 	{
 		"nvim-telescope/telescope.nvim",
-		requires = {
+		dependencies = {
 			{ "nvim-lua/plenary.nvim" },
 			{ "BurntSushi/ripgrep" },
-			{ "nvim-telescope/telescope-fzf-native.nvim", run = "make" },
+			{ "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
 		},
 	},
 	{
 		"VonHeikemen/lsp-zero.nvim",
-		requires = {
+		dependencies = {
 			{ "neovim/nvim-lspconfig" },
 			{ "williamboman/mason.nvim" },
 			{ "williamboman/mason-lspconfig.nvim" },
