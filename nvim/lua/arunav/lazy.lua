@@ -14,7 +14,7 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
 	"rose-pine/neovim",
-  { "catppuccin/nvim", as = "catppuccin" },
+  "catppuccin/nvim",
 	"nvim-treesitter/nvim-treesitter",
 	"tpope/vim-commentary",
 	"tpope/vim-surround",
@@ -26,7 +26,7 @@ require("lazy").setup({
 	"ms-jpq/chadtree",
 	"nvim-tree/nvim-web-devicons",
 	"folke/trouble.nvim",
-	"tanvirtin/vgit.nvim",
+  "airblade/vim-gitgutter",
 	{
 		"nvim-telescope/telescope.nvim",
 		dependencies = {
