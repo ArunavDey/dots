@@ -13,9 +13,9 @@ exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 exec_always --no-startup-id dunst &
 exec_always --no-startup-id picom &
 exec_always --no-startup-id setxkbmap -option ctrl:swapcaps &
-exec_always --no-startup-id feh --bg-fill ~/pictures/wallpapers/forest.jpg &
-exec_always --no-startup-id xinput set-prop 15 310 1 &
-exec_always --no-startup-id xinput set-prop 15 283 1 &
+exec_always --no-startup-id feh --bg-fill ~/pictures/wallpapers/splash.jpg &
+exec_always --no-startup-id xinput set-prop 13 288 1 &
+exec_always --no-startup-id xinput set-prop 13 293 1 &
 exec_always --no-startup-id ~/.config/polybar/scripts/bars/minimal_dark.sh &
 exec_always --no-startup-id ~/.config/i3/scripts/set_display.sh &
 
