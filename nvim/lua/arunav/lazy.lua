@@ -27,6 +27,8 @@ require("lazy").setup({
 	"nvim-tree/nvim-web-devicons",
 	"folke/trouble.nvim",
   "airblade/vim-gitgutter",
+  "junegunn/fzf.vim",
+  "junegunn/fzf",
 	{
 		"nvim-telescope/telescope.nvim",
 		dependencies = {
