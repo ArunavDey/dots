@@ -29,6 +29,8 @@ require("lazy").setup({
   "airblade/vim-gitgutter",
   "junegunn/fzf.vim",
   "junegunn/fzf",
+  "ahmedkhalf/project.nvim",
+  { "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} },
 	{
 		"nvim-telescope/telescope.nvim",
 		dependencies = {
