@@ -25,9 +25,19 @@ require("lazy").setup({
 	"folke/trouble.nvim",
 	"folke/which-key.nvim",
 	"airblade/vim-gitgutter",
-	"junegunn/fzf.vim",
-	"junegunn/fzf",
 	"preservim/tagbar",
+	{
+		"VonHeikemen/lsp-zero.nvim",
+		branch = "v3.x",
+		dependencies = {
+			"neovim/nvim-lspconfig",
+			"hrsh7th/cmp-nvim-lsp",
+			"hrsh7th/nvim-cmp",
+			"L3MON4D3/LuaSnip",
+			"williamboman/mason.nvim",
+			"williamboman/mason-lspconfig.nvim",
+		},
+	},
 	{
 		"nvim-neo-tree/neo-tree.nvim",
 		dependencies = {
@@ -42,22 +52,6 @@ require("lazy").setup({
 			{ "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
 			{ "nvim-telescope/telescope-project.nvim" },
 			{ "nvim-telescope/telescope-file-browser.nvim" },
-		},
-	},
-	{
-		"VonHeikemen/lsp-zero.nvim",
-		dependencies = {
-			{ "neovim/nvim-lspconfig" },
-			{ "williamboman/mason.nvim" },
-			{ "williamboman/mason-lspconfig.nvim" },
-			{ "hrsh7th/nvim-cmp" },
-			{ "hrsh7th/cmp-buffer" },
-			{ "hrsh7th/cmp-path" },
-			{ "saadparwaiz1/cmp_luasnip" },
-			{ "hrsh7th/cmp-nvim-lsp" },
-			{ "hrsh7th/cmp-nvim-lua" },
-			{ "L3MON4D3/LuaSnip" },
-			{ "rafamadriz/friendly-snippets" },
 		},
 	},
 })

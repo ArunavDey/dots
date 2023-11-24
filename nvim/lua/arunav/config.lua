@@ -14,7 +14,6 @@ treesitter.setup({
 	},
 })
 autopairs.setup()
-lsp.preset("recommended")
 lsp.setup()
 mason.setup()
 mason_lspconfig.setup({
