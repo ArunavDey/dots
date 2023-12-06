@@ -1,0 +1,10 @@
+#############################
+##### AUTHOR: Arunav Dey ####
+#############################
+include config.d/*.conf
+
+############################
+##### GENERAL SETTINGS #####
+############################
+set $mod Mod4
+focus_follows_mouse no

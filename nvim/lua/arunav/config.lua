@@ -6,7 +6,11 @@ local telescope = require("telescope")
 local wk = require("which-key")
 local mason = require("mason")
 local mason_lspconfig = require("mason-lspconfig")
-vim.diagnostic.open_float()
+local rest = require("rest-nvim")
+
+rest.setup({
+	result_split_in_place = true,
+})
 treesitter.setup({
 	sync_install = true,
 	highlight = {
@@ -17,15 +21,15 @@ autopairs.setup()
 lsp.setup()
 mason.setup()
 mason_lspconfig.setup({
-  handlers = {
-    lsp.default_setup
-  }
+	handlers = {
+		lsp.default_setup,
+	},
 })
 wk.register({
-  e = "Neotree",
-  u = "Undotree",
-  t = "Tagbar",
-  c = "Format code",
+	e = "Neotree",
+	u = "Undotree",
+	t = "Tagbar",
+	c = "Format code",
 	f = {
 		name = "files",
 		p = "Find file",
@@ -35,6 +39,7 @@ wk.register({
 	},
 }, { prefix = "<leader>" })
 
+vim.diagnostic.open_float()
 vim.cmd.colorscheme("catppuccin-macchiato")
 
 -- disables background colour

@@ -18,6 +18,7 @@ require("lazy").setup({
 	"tpope/vim-commentary",
 	"tpope/vim-surround",
 	"tpope/vim-fugitive",
+	"tpope/vim-rhubarb",
 	"windwp/nvim-autopairs",
 	"mbbill/undotree",
 	"sbdchd/neoformat",
@@ -26,6 +27,7 @@ require("lazy").setup({
 	"folke/which-key.nvim",
 	"airblade/vim-gitgutter",
 	"preservim/tagbar",
+	"rest-nvim/rest.nvim",
 	{
 		"VonHeikemen/lsp-zero.nvim",
 		branch = "v3.x",
@@ -34,14 +36,9 @@ require("lazy").setup({
 			"hrsh7th/cmp-nvim-lsp",
 			"hrsh7th/nvim-cmp",
 			"L3MON4D3/LuaSnip",
+			"folke/neodev.nvim",
 			"williamboman/mason.nvim",
-			"williamboman/mason-lspconfig.nvim",
-		},
-	},
-	{
-		"nvim-neo-tree/neo-tree.nvim",
-		dependencies = {
-			"MunifTanjim/nui.nvim",
+			"williamboman/mason-lspconfig.nvim"
 		},
 	},
 	{
