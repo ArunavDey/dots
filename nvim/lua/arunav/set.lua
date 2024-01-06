@@ -4,16 +4,13 @@ local o = vim.opt
 
 o.wildmenu = true
 o.incsearch = true
-o.cursorline = true
 o.number = true
 o.relativenumber = true
 o.termguicolors = true
 o.wrap = true
 o.textwidth = 80
+o.shiftwidth = 2
 o.autoindent = true
 o.smartindent = true
-o.tabstop = 2
-o.shiftwidth = 2
 o.expandtab = true
 g.mapleader = " "
-g.netrw_browser_split = 0
