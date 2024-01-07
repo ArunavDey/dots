@@ -38,7 +38,7 @@ end)
 
 mason.setup({})
 mason_lspconfig.setup({
-  ensure_installed = { "tsserver", "pyright", "rust_analyzer" },
+  ensure_installed = { "tsserver", "pyright", "rust_analyzer", "lua_ls" },
   handlers = {
     lsp_zero.default_setup,
   },

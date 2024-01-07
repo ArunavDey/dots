@@ -14,3 +14,6 @@ vim.api.nvim_set_keymap("n", "<leader>x", [[<cmd>lua require'rest-nvim'.run()<cr
 vim.api.nvim_set_keymap("n", "<leader>fb", 'y<ESC>:Telescope buffers default_text=<c-r>0<CR>', opts)
 vim.api.nvim_set_keymap("n", "<leader>fp", 'y<ESC>:Telescope find_files default_text=<c-r>0<CR>', opts)
 vim.api.nvim_set_keymap("n", "<leader>ff", 'y<ESC>:Telescope live_grep default_text=<c-r>0<CR>', opts)
+
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")

@@ -13,6 +13,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
+  "rose-pine/neovim",
   "catppuccin/nvim",
   "nvim-treesitter/nvim-treesitter",
   "tpope/vim-commentary",
