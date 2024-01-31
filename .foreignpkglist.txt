@@ -7,6 +7,7 @@ gotop 4.2.0-1
 i3lock-color 2.13.c.5-1
 jetbrains-toolbox 2.1.2.18853-1
 lazydocker 0.23.1-1
+light 1.2.2-3
 mongodb-bin 7.0.4-1
 pfetch 0.6.0-3
 picom-ibhagwan-git 1578_Next.297.gc4107bb_2021.11.03-1

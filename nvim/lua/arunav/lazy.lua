@@ -47,6 +47,7 @@ require("lazy").setup({
       { "nvim-lua/plenary.nvim" },
       { "BurntSushi/ripgrep" },
       { "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
+      { "nvim-telescope/telescope-file-browser.nvim" }
     },
   },
 })
