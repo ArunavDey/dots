@@ -1,5 +1,4 @@
 require("arunav.configs.lsp")
-require("arunav.configs.rest")
 require("arunav.configs.theme")
 require("arunav.configs.telescope")
 require("arunav.configs.which_key")

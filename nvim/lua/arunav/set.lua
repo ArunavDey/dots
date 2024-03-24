@@ -14,3 +14,6 @@ o.autoindent = true
 o.smartindent = true
 o.expandtab = true
 g.mapleader = " "
+g.netrw_keepdir = 0
+g.netrw_banner = 0
+
