@@ -22,6 +22,9 @@ require("lazy").setup({
     {"airblade/vim-gitgutter"}, -- git diff symbols
     {"preservim/tagbar"}, -- browse tags of the current file
     {
+        "nvim-lualine/lualine.nvim", -- status bar
+        dependencies = {"nvim-tree/nvim-web-devicons"}
+    }, {
         "VonHeikemen/lsp-zero.nvim",
         branch = "v3.x",
         dependencies = {
