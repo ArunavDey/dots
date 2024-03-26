@@ -16,11 +16,14 @@ require("lazy").setup({
     {"tpope/vim-surround"}, -- surround code
     {"tpope/vim-fugitive"}, -- git helper
     {"tpope/vim-rhubarb"}, -- another git helper
+    {"tpope/vim-vinegar"}, -- netrw enhancer
     {"windwp/nvim-autopairs"}, -- autocomplete braces and tags
     {"mbbill/undotree"}, -- browse file history
     {"folke/which-key.nvim"}, -- show keybind helper
-    {"airblade/vim-gitgutter"}, -- git diff symbols
+    -- {"airblade/vim-gitgutter"}, -- git diff symbols
     {"preservim/tagbar"}, -- browse tags of the current file
+    {"nvim-tree/nvim-tree.lua"},
+    {"lewis6991/gitsigns.nvim"},
     {
         "nvim-lualine/lualine.nvim", -- status bar
         dependencies = {"nvim-tree/nvim-web-devicons"}

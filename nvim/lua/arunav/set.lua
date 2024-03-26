@@ -13,6 +13,7 @@ o.shiftwidth = 2
 o.autoindent = true
 o.smartindent = true
 o.expandtab = true
+o.list = true
 g.mapleader = " "
 g.netrw_keepdir = 0
 g.netrw_banner = 0
