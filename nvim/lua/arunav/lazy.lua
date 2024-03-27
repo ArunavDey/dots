@@ -10,7 +10,8 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-    {"catppuccin/nvim"}, -- colorscheme
+    {"catppuccin/nvim"}, -- catppuccin colorscheme
+    {"tanvirtin/monokai.nvim"}, -- monokai colorscheme
     {"nvim-treesitter/nvim-treesitter"}, -- better syntax highlighting
     {"tpope/vim-commentary"}, -- comment code
     {"tpope/vim-surround"}, -- surround code
@@ -20,10 +21,9 @@ require("lazy").setup({
     {"windwp/nvim-autopairs"}, -- autocomplete braces and tags
     {"mbbill/undotree"}, -- browse file history
     {"folke/which-key.nvim"}, -- show keybind helper
-    -- {"airblade/vim-gitgutter"}, -- git diff symbols
     {"preservim/tagbar"}, -- browse tags of the current file
-    {"nvim-tree/nvim-tree.lua"},
-    {"lewis6991/gitsigns.nvim"},
+    {"lewis6991/gitsigns.nvim"}, -- git diff symbols
+    {"xiyaowong/transparent.nvim"}, -- transparent background
     {
         "nvim-lualine/lualine.nvim", -- status bar
         dependencies = {"nvim-tree/nvim-web-devicons"}

@@ -18,4 +18,7 @@ g.mapleader = " "
 g.netrw_keepdir = 0
 g.netrw_banner = 0
 g.laststatus = 2
+g.transparent_groups = vim.list_extend(g.transparent_groups or {}, {
+    "TelescopeResultsNormal", "TelescopePromptNormal", "TelescopePreviewNormal", "MasonNormal"
+})
 
