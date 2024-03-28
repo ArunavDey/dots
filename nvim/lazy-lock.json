@@ -1,7 +1,9 @@
 {
   "LuaSnip": { "branch": "master", "commit": "a7a4b4682c4b3e2ba82b82a4e6e5f5a0e79dec32" },
   "cmp-nvim-lsp": { "branch": "main", "commit": "5af77f54de1b16c34b23cba810150689a3a90312" },
+  "everforest": { "branch": "master", "commit": "a0f744c5574e11f1be365fe6be41da8ac4a0ae5b" },
   "gitsigns.nvim": { "branch": "main", "commit": "078041e9d060a386b0c9d3a8c7a7b019a35d3fb0" },
+  "gruvbox-material": { "branch": "master", "commit": "0322d59d7cafdeeef57b828b56a4649bb5fe5847" },
   "lazy.nvim": { "branch": "main", "commit": "af6afefbb46ab29a8a1db69536b04290a9403876" },
   "lsp-zero.nvim": { "branch": "v3.x", "commit": "5dac9c57b6445d4193c10d86ec96f7b79e3b3750" },
   "lualine.nvim": { "branch": "master", "commit": "b5e8bb642138f787a2c1c5aedc2a78cb2cebbd67" },

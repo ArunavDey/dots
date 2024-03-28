@@ -12,6 +12,8 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
     {"catppuccin/nvim"}, -- catppuccin colorscheme
     {"tanvirtin/monokai.nvim"}, -- monokai colorscheme
+    {"sainnhe/everforest"}, -- everforest colorscheme
+    {"sainnhe/gruvbox-material"}, -- gruvbox-material colorscheme
     {"nvim-treesitter/nvim-treesitter"}, -- better syntax highlighting
     {"tpope/vim-commentary"}, -- comment code
     {"tpope/vim-surround"}, -- surround code
