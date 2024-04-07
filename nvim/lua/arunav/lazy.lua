@@ -26,6 +26,7 @@ require("lazy").setup({
     {"preservim/tagbar"}, -- browse tags of the current file
     {"lewis6991/gitsigns.nvim"}, -- git diff symbols
     {"xiyaowong/transparent.nvim"}, -- transparent background
+    {"andweeb/presence.nvim"}, -- discord presence
     {
         "nvim-lualine/lualine.nvim", -- status bar
         dependencies = {"nvim-tree/nvim-web-devicons"}
