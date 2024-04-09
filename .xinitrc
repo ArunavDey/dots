@@ -19,5 +19,6 @@ xset s off & # disable screen saver
 xset b off & # disable bell 
 redshift -l 12.9634:77.5855 -t 5000K:4000K -P -m randr & # screen temperature
 gnome-keyring-daemon --start & # passwords
+setxkbmap -option ctrl:swapcaps & # swap control and caps lock
 
 exec i3
