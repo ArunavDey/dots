@@ -3,5 +3,10 @@ return {
 	{ "tanvirtin/monokai.nvim" }, -- monokai colorscheme
 	{ "sainnhe/everforest" }, -- everforest colorscheme
 	{ "sainnhe/gruvbox-material" }, -- gruvbox-material colorscheme
-	{ "xiyaowong/transparent.nvim" }, -- transparent background
+	{
+		"xiyaowong/transparent.nvim",
+		config = function()
+			require("transparent").setup()
+		end,
+	}, -- transparent background
 }
