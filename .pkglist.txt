@@ -2,6 +2,7 @@ acpilight 1.2-2
 alsa-utils 1.2.11-1
 amd-ucode 20240312.3b128b60-1
 arandr 0.1.11-2
+autopep8 1:2.1.0-1
 baobab 46.0-1
 base 3-2
 base-devel 1-1
@@ -35,6 +36,7 @@ feh 3.10.2-1
 file-roller 44-2
 firefox 124.0.2-1
 fish 3.7.1-1
+flake8 1:7.0.0-1
 font-manager 0.8.8-1
 fox 1:1.6.57-3
 fzf 0.48.1-1
@@ -159,7 +161,9 @@ polybar 3.7.1-1
 postgresql 16.2-1
 power-profiles-daemon 0.21-1
 powertop 2.15-1
+prettier 3.2.5-1
 python-isort 5.13.2-1
+python-lsp-server 1.11.0-1
 python-pip 24.0-1
 python-pynvim 0.5.0-2
 python-sqlalchemy 1.4.52-1
@@ -200,6 +204,7 @@ ttf-dejavu 2.37+18+g9b5d1b2f-7
 ttf-jetbrains-mono-nerd 3.2.0-1
 tumbler 4.18.2-1
 typescript 5.4.4-1
+typescript-language-server 4.3.3-1
 ufw 0.36.2-3
 unzip 6.0-20
 vi 1:070224-6

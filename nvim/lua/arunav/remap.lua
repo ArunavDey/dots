@@ -5,7 +5,12 @@ local opts = { noremap = true, silent = true }
 vim.keymap.set("n", "<leader>e", vim.cmd.NvimTreeToggle, opts)
 vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle, opts)
 vim.keymap.set("n", "<leader>t", vim.cmd.TagbarToggle, opts)
-vim.keymap.set("n", "<leader>c", vim.cmd.Neoformat, opts)
+vim.keymap.set("n", "<leader>c", function()
+  print("Formatting current buffer")
+  -- vim.lsp.buf.format({ async = false, timeout_ms = 5000 })
+  require("conform").format()
+end, opts)
+
 vim.keymap.set("n", "<leader>[", vim.cmd.bN, opts)
 vim.keymap.set("n", "<leader>]", vim.cmd.bn, opts)
 vim.keymap.set("n", "<leader>fd", vim.cmd.TroubleToggle, opts)
