@@ -1,7 +1,13 @@
 return {
 	{ "tpope/vim-commentary" }, -- better comments
 	{ "tpope/vim-surround" }, -- surround code
-	{ "tpope/vim-vinegar" }, -- netrw enhancer
+	-- { "tpope/vim-vinegar" }, -- netrw enhancer
+	{
+		"stevearc/oil.nvim",
+		config = function()
+			require("oil").setup()
+		end,
+	}, -- better file browser
 	{
 		"windwp/nvim-autopairs",
 		config = function()
