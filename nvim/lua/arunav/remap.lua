@@ -2,7 +2,7 @@ local vim = vim
 local telescope_builtin = require("telescope.builtin")
 local opts = { noremap = true, silent = true }
 
-vim.keymap.set("n", "-", "<CMD>Oil --float<CR>", opts)
+vim.keymap.set("n", "-", "<CMD>Oil<CR>", opts)
 vim.keymap.set("n", "<leader>e", vim.cmd.NvimTreeToggle, opts)
 vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle, opts)
 vim.keymap.set("n", "<leader>t", vim.cmd.TagbarToggle, opts)

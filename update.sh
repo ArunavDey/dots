@@ -17,6 +17,8 @@ echo -e "\tzathura"
 cp -r ~/.config/zathura ./
 echo -e "\ttmux"
 cp -r ~/.config/tmux/tmux.conf ./tmux/
+echo -e "\twezterm"
+cp ~/.wezterm.lua ./
 
 echo "Backing up configs to /mnt/hdd/dots"
 sudo mkdir /mnt/hdd/dots; cp -r ./* /mnt/hdd/dots/

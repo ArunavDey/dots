@@ -1,4 +1,9 @@
 return {
+	{
+		"vhyrro/luarocks.nvim",
+		priority = 1000,
+		config = true,
+	},
 	{ "tpope/vim-commentary" }, -- better comments
 	{ "tpope/vim-surround" }, -- surround code
 	-- { "tpope/vim-vinegar" }, -- netrw enhancer
@@ -38,7 +43,9 @@ return {
 		"nvim-lualine/lualine.nvim", -- status bar
 		dependencies = { "nvim-tree/nvim-web-devicons" },
 		config = function()
-			require("lualine").setup()
+			require("lualine").setup({
+				extensions = { "oil", "mason", "fugitive", "trouble", "lazy" },
+			})
 		end,
 	},
 	{ "mbbill/undotree" }, -- browse file history
