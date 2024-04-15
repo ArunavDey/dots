@@ -19,5 +19,6 @@ xset s off & # disable screen saver
 xset b off & # disable bell 
 redshift -l 12.9634:77.5855 -t 5000K:4000K -P -m randr & # screen temperature
 gnome-keyring-daemon --start & # passwords
+xrandr --output HDMI-0 --primary --mode 1920x1080 --rate 144 --output DP-2 --mode 1920x1080 --rate 120 & # set monitor refresh rate
 
 exec i3
