@@ -1,28 +1,15 @@
 local vim = vim
-local g = vim.g
-local o = vim.opt
 
-o.wildmenu = true
-o.incsearch = true
-o.number = true
-o.relativenumber = true
-o.termguicolors = true
-o.wrap = true o.textwidth = 80
-o.shiftwidth = 2
-o.tabstop = 2
-o.autoindent = true
-o.smartindent = true
-o.expandtab = true
-o.list = true
-g.mapleader = " "
-g.netrw_keepdir = 0
-g.netrw_banner = 0
-g.laststatus = 2
-g.transparent_groups = vim.list_extend(g.transparent_groups or {}, {
-  "telescoperesultsnormal",
-  "telescopepromptnormal",
-  "telescopepreviewnormal",
-})
-g.netrw_bufsettings = "noma nomod nu rnu nobl nowrap ro"
-
-vim.cmd.colorscheme("catppuccin-mocha")
+vim.opt.wildmenu = true
+vim.opt.incsearch = true
+vim.opt.number = true
+vim.opt.relativenumber = true
+vim.opt.cursorline = true
+vim.opt.termguicolors = true
+vim.opt.wrap = true
+vim.opt.textwidth = 80
+vim.opt.shiftwidth = 2
+vim.opt.tabstop = 2
+vim.opt.autoindent = true
+vim.opt.smartindent = true
+vim.opt.expandtab = true
