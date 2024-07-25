@@ -5,18 +5,18 @@ exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id nm-applet
 exec xinput set-prop "MSFT0001:00 06CB:7F28 Touchpad" "libinput Tapping Enabled" 1 &
 exec xinput set-prop "MSFT0001:00 06CB:7F28 Touchpad" "libinput Natural Scrolling Enabled" 1 &
-exec_always redshift -l 12.9634:77.5855 -t 5000K:3000K -P -m randr &
+# exec_always redshift -l 12.9634:77.5855 -t 5000K:3000K -P -m randr &
 exec_always setxkbmap -option ctrl:nocaps &
 exec_always --no-startup-id dunst &
 exec_always --no-startup-id picom &
-exec_always --no-startup-id feh --bg-fill ~/pictures/wallpapers/porsche-catppuccin.webp &
+exec_always --no-startup-id feh --bg-fill ~/Pictures/Wallpapers/tourbillon.jpeg &
 # exec_always --no-startup-id bash ~/.config/polybar/scripts/bars/minimal_dark.sh &
-exec_always --no-startup-id ~/.config/i3/scripts/set_display.sh &
+exec_always --no-startup-id ~/.scripts/set_display.sh &
 
 
 # set $refresh_i3status killall -SIGUSR1 i3status
-bindsym XF86MonBrightnessUp exec light -A 5
-bindsym XF86MonBrightnessDown exec light -U 5
+bindsym XF86MonBrightnessUp exec xbacklight -inc 5
+bindsym XF86MonBrightnessDown exec xbacklight -dec 5
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5%
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5%
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
@@ -32,7 +32,7 @@ set $right l
 
 floating_modifier Mod4
 tiling_drag modifier titlebar
-bindsym Mod4+Return exec kitty
+bindsym Mod4+Return exec wezterm
 bindsym Mod4+Shift+q kill
 bindsym Mod4+space exec --no-startup-id dmenu_run
 bindsym Mod4+Shift+x exec systemctl suspend
@@ -141,5 +141,8 @@ bindsym Mod4+r mode "resize"
 bar {
   status_command i3status
 }
+
+gaps inner 8px
+gaps outer 2px
 
 exec i3-config-wizard
