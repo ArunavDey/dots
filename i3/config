@@ -143,6 +143,5 @@ bar {
 }
 
 gaps inner 8px
-gaps outer 2px
 
 exec i3-config-wizard
